@@ -91,10 +91,16 @@ C:\Users\gbsuf\OneDrive\ambiente_programacao\moneta_Gustavo
 ```bash
 git init
 git add .
-git commit -m "Primeira versão do Moneta"
+git commit -m "Primeira versão do Moneta Gustavo 2026"
 git branch -M main
 git remote add origin <[https://github.com/gbsufscar/monetaGustavo2026.git](https://github.com/gbsufscar/monetaGustavo2026.git)>
 git push -u origin main
+```
+
+'''bash
+git add .
+git commit -m "Mensagem de commit"
+git push
 ```
 
 ## 🛡️ Boas práticas ao publicar

@@ -1,0 +1,29 @@
+# Manipulação e análise de dados
+pandas
+numpy
+scipy
+
+# Machine Learning
+scikit-learn
+
+# Coleta de dados financeiros
+pandas_datareader
+yfinance
+requests
+
+# Visualização de dados
+matplotlib
+plotly
+pathlib
+
+# Aplicações Web / UI
+streamlit
+stqdm
+st-annotated-text
+
+# Manipular arquivos Excel
+openpyxl
+
+# Ambiente e suporte
+ipykernel
+

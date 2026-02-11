@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+venvMonetaGustavo/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Data outputs / artifacts
+# *.xlsx
+*.csv
+*.parquet
+*.pkl
+*.joblib
+
+# Outputs gerados pelo projeto
+# /utils/Ticker_beest.json
+# /utils/ticker_besst_yf.json
+#/resultados_treinamento.xlsx
+
+# Streamlit
+.streamlit/
+
+# Build
+build/
+dist/
+
+# Caches
+.mypy_cache/
+.pytest_cache/
+.cache/
+
+# Optional: keep docs generated files
+docs/

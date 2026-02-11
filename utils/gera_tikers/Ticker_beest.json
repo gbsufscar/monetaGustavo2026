@@ -1,0 +1,1664 @@
+{
+    "Outra": {
+        "Exploração, Refino e Distribuição": {
+            "AZTE": {
+                "Empresa": "AZT ENERGIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BRAV": {
+                "Empresa": "BRAVA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSAN": {
+                "Empresa": "COSAN",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RPMG": {
+                "Empresa": "PET MANGUINH",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RECV": {
+                "Empresa": "PETRORECSA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRIO": {
+                "Empresa": "PETRORIO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RAIZ": {
+                "Empresa": "RAIZEN",
+                "Segmento_B3": "Nível 2"
+            },
+            "UGPA": {
+                "Empresa": "ULTRAPAR",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Equipamentos e Serviços": {
+            "LUPA": {
+                "Empresa": "LUPATECH",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OPCT": {
+                "Empresa": "OCEANPACT",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OSXB": {
+                "Empresa": "OSX BRASIL",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Distribuição de Combustíveis": {
+            "VBBR": {
+                "Empresa": "VIBRA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Minerais Metálicos": {
+            "AURA": {
+                "Empresa": "AURA 360",
+                "Segmento_B3": "BDR3"
+            },
+            "BRAP": {
+                "Empresa": "BRADESPAR",
+                "Segmento_B3": "Nível 1"
+            },
+            "CBAV": {
+                "Empresa": "CBA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CMIN": {
+                "Empresa": "CSNMINERACAO",
+                "Segmento_B3": "Nível 2"
+            },
+            "LTEL": {
+                "Empresa": "LITEL",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "LTLA": {
+                "Empresa": "LITELA",
+                "Segmento_B3": "Básico Balcão"
+            }
+        },
+        "Siderurgia": {
+            "FESA": {
+                "Empresa": "FERBASA",
+                "Segmento_B3": "Nível 1"
+            },
+            "GGBR": {
+                "Empresa": "GERDAU",
+                "Segmento_B3": "Nível 1"
+            },
+            "GOAU": {
+                "Empresa": "GERDAU MET",
+                "Segmento_B3": "Nível 1"
+            },
+            "CSNA": {
+                "Empresa": "SID NACIONAL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "USIM": {
+                "Empresa": "USIMINAS",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Artefatos de Ferro e Aço": {
+            "HAGA": {
+                "Empresa": "HAGA S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MGEL": {
+                "Empresa": "MANGELS INDL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PATI": {
+                "Empresa": "PANATLANTICA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TKNO": {
+                "Empresa": "TEKNO",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Artefatos de Cobre": {
+            "PMAM": {
+                "Empresa": "PARANAPANEMA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Petroquímicos": {
+            "BRKM": {
+                "Empresa": "BRASKEM",
+                "Segmento_B3": "Nível 1"
+            },
+            "DEXP": {
+                "Empresa": "DEXXOS PAR",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Fertilizantes e Defensivos": {
+            "FHER": {
+                "Empresa": "FER HERINGER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NUTR": {
+                "Empresa": "NUTRIPLANT",
+                "Segmento_B3": "Mais"
+            },
+            "VITT": {
+                "Empresa": "VITTIA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Químicos Diversos": {
+            "CRPG": {
+                "Empresa": "CRISTAL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "UNIP": {
+                "Empresa": "UNIPAR",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Madeira": {
+            "DXCO": {
+                "Empresa": "DEXCO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EUCA": {
+                "Empresa": "EUCATEX",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Papel e Celulose": {
+            "KLBN": {
+                "Empresa": "KLABIN S/A",
+                "Segmento_B3": "Nível 2"
+            },
+            "MSPA": {
+                "Empresa": "MELHOR SP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "NEMO": {
+                "Empresa": "SUZANO HOLD",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SUZB": {
+                "Empresa": "SUZANO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Embalagens": {
+            "RANI": {
+                "Empresa": "IRANI",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Materiais Diversos": {
+            "SNSY": {
+                "Empresa": "SANSUY",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos para Construção": {
+            "ETER": {
+                "Empresa": "ETERNIT",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PTBL": {
+                "Empresa": "PORTOBELLO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Construção Pesada": {
+            "AZEV": {
+                "Empresa": "AZEVEDO",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Engenharia Consultiva": {
+            "SOND": {
+                "Empresa": "SONDOTECNICA",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Serviços Diversos": {
+            "ARML": {
+                "Empresa": "ARMAC",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MILS": {
+                "Empresa": "MILLS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRNR": {
+                "Empresa": "PRINER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BBML": {
+                "Empresa": "BBMLOGISTICA",
+                "Segmento_B3": "Mais"
+            },
+            "CTAX": {
+                "Empresa": "CONTAX",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "DTCY": {
+                "Empresa": "DTCOM-DIRECT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ALPK": {
+                "Empresa": "ESTAPAR",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GGPS": {
+                "Empresa": "GPS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VLID": {
+                "Empresa": "VALID",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ADMF": {
+                "Empresa": "CIABRASF",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Material Aeronáutico e de Defesa": {
+            "EMBJ": {
+                "Empresa": "EMBRAER",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Material Rodoviário": {
+            "FRAS": {
+                "Empresa": "FRAS-LE",
+                "Segmento_B3": "Nível 1"
+            },
+            "POMO": {
+                "Empresa": "MARCOPOLO",
+                "Segmento_B3": "Nível 2"
+            },
+            "RAPT": {
+                "Empresa": "RANDON PART",
+                "Segmento_B3": "Nível 1"
+            },
+            "RCSL": {
+                "Empresa": "RECRUSUL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RSUL": {
+                "Empresa": "RIOSULENSE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TUPY": {
+                "Empresa": "TUPY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MWET": {
+                "Empresa": "WETZEL S/A",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Motores , Compressores e Outros": {
+            "SHUL": {
+                "Empresa": "SCHULZ",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WEGE": {
+                "Empresa": "WEG",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Máq. e Equip. Industriais": {
+            "EALT": {
+                "Empresa": "ACO ALTONA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AERI": {
+                "Empresa": "AERIS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BDLL": {
+                "Empresa": "BARDELLA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "INEP": {
+                "Empresa": "INEPAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "KEPL": {
+                "Empresa": "KEPLER WEBER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FRIO": {
+                "Empresa": "METALFRIO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PTCA": {
+                "Empresa": "PRATICA",
+                "Segmento_B3": "Mais Nível 2"
+            },
+            "ROMI": {
+                "Empresa": "ROMI",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Máq. e Equip. Construção e Agrícolas": {
+            "MTSA": {
+                "Empresa": "METISA",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Armas e Munições": {
+            "TASA": {
+                "Empresa": "TAURUS ARMAS",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Linhas Aéreas de Passageiros": {
+            "AZUL": {
+                "Empresa": "AZUL",
+                "Segmento_B3": "Nível 2"
+            },
+            "GOLL": {
+                "Empresa": "GOL",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Transporte Ferroviário": {
+            "VSPT": {
+                "Empresa": "FER C ATLANT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MRSA": {
+                "Empresa": "MRS LOGIST",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "RAIL": {
+                "Empresa": "RUMO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Transporte Hidroviário": {
+            "HBSA": {
+                "Empresa": "HIDROVIAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LOGN": {
+                "Empresa": "LOG-IN",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LUXM": {
+                "Empresa": "TREVISA",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Transporte Rodoviário": {
+            "JSLG": {
+                "Empresa": "JSL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SEQL": {
+                "Empresa": "SEQUOIA LOG",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TGMA": {
+                "Empresa": "TEGMA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Exploração de Rodovias": {
+            "CRTE": {
+                "Empresa": "CONC RIO TER",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ECOR": {
+                "Empresa": "ECORODOVIAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MOTV": {
+                "Empresa": "MOTIVA SA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TPIS": {
+                "Empresa": "TRIUNFO PART",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serviços de Apoio e Armazenagem": {
+            "AGRU": {
+                "Empresa": "GRUAIRPORT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HMOB": {
+                "Empresa": "HMOBI S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "IVPR": {
+                "Empresa": "INVEPAR",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "PSVM": {
+                "Empresa": "PORTO VM",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Material de Transporte": {
+            "MMAQ": {
+                "Empresa": "MINASMAQUINA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBNS": {
+                "Empresa": "RODOBENS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WLMM": {
+                "Empresa": "WLM IND COM",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Agricultura": {
+            "TTEN": {
+                "Empresa": "3TENTOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AGXY": {
+                "Empresa": "AGROGALAXY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "APTI": {
+                "Empresa": "ALIPERTI",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SOJA": {
+                "Empresa": "BOA SAFRA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AGRO": {
+                "Empresa": "BRASILAGRO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CTCA": {
+                "Empresa": "CTC S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "EGGY": {
+                "Empresa": "GRANJA FARIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SLCE": {
+                "Empresa": "SLC AGRICOLA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LAND": {
+                "Empresa": "TERRASANTAPA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Açucar e Alcool": {
+            "JALL": {
+                "Empresa": "JALLESMACHAD",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SMTO": {
+                "Empresa": "SAO MARTINHO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Carnes e Derivados": {
+            "BAUH": {
+                "Empresa": "EXCELSIOR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "FICT": {
+                "Empresa": "FICTORALIMEN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "JBSS": {
+                "Empresa": "JBS N.V.",
+                "Segmento_B3": "BDR2"
+            },
+            "MBRF": {
+                "Empresa": "MARFRIG",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BEEF": {
+                "Empresa": "MINERVA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MNPR": {
+                "Empresa": "MINUPAR",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Alimentos Diversos": {
+            "CAML": {
+                "Empresa": "CAMIL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "JOPA": {
+                "Empresa": "JOSAPAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MDIA": {
+                "Empresa": "M.DIASBRANCO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ODER": {
+                "Empresa": "ODERICH",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Cervejas e Refrigerantes": {
+            "ABEV": {
+                "Empresa": "AMBEV S/A",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos de Cuidado Pessoal": {
+            "ESPA": {
+                "Empresa": "ESPACOLASER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NATU": {
+                "Empresa": "NATURA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Produtos de Limpeza": {
+            "BOBR": {
+                "Empresa": "BOMBRIL",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Alimentos": {
+            "ASAI": {
+                "Empresa": "ASSAI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GMAT": {
+                "Empresa": "GRUPO MATEUS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PCAR": {
+                "Empresa": "P.ACUCAR-CBD",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Tecidos, Vestuário e Calçados": {
+            "AZZA": {
+                "Empresa": "AZZAS 2154",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CEAB": {
+                "Empresa": "CEA MODAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CGRA": {
+                "Empresa": "GRAZZIOTIN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AMAR": {
+                "Empresa": "LOJAS MARISA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LREN": {
+                "Empresa": "LOJAS RENNER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RIAA": {
+                "Empresa": "RIACHUELO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VSTE": {
+                "Empresa": "VESTE",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Eletrodomésticos": {
+            "ALLD": {
+                "Empresa": "ALLIED",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BHIA": {
+                "Empresa": "CASAS BAHIA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MGLU": {
+                "Empresa": "MAGAZ LUIZA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WHRL": {
+                "Empresa": "WHIRLPOOL",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos Diversos": {
+            "AMER": {
+                "Empresa": "AMERICANAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SBFG": {
+                "Empresa": "GRUPO SBF",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LLBI": {
+                "Empresa": "LE BISCUIT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AUAU": {
+                "Empresa": "PETZCOBASI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LJQQ": {
+                "Empresa": "QUERO-QUERO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Incorporações": {
+            "AVLL": {
+                "Empresa": "ALPHAVILLE",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CALI": {
+                "Empresa": "CONST A LIND",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CURY": {
+                "Empresa": "CURY S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CYRE": {
+                "Empresa": "CYRELA REALT",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DIRR": {
+                "Empresa": "DIRECIONAL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EVEN": {
+                "Empresa": "EVEN",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EZTC": {
+                "Empresa": "EZTEC",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FIEI": {
+                "Empresa": "FICA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "GFSA": {
+                "Empresa": "GAFISA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "HBOR": {
+                "Empresa": "HELBOR",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "INNC": {
+                "Empresa": "INC SA",
+                "Segmento_B3": "Mais"
+            },
+            "JHSF": {
+                "Empresa": "JHSF PART",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "JFEN": {
+                "Empresa": "JOAO FORTES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "KLAS": {
+                "Empresa": "KALLAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LAVV": {
+                "Empresa": "LAVVI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MELK": {
+                "Empresa": "MELNICK",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MTRE": {
+                "Empresa": "MITRE REALTY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MDNE": {
+                "Empresa": "MOURA DUBEUX",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MRVE": {
+                "Empresa": "MRV",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PDGR": {
+                "Empresa": "PDG REALT",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PLPL": {
+                "Empresa": "PLANOEPLANO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CCTY": {
+                "Empresa": "RDVC CITY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RSID": {
+                "Empresa": "ROSSI RESID",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TCSA": {
+                "Empresa": "TECNISA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TEND": {
+                "Empresa": "TENDA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TRIS": {
+                "Empresa": "TRISUL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VIVR": {
+                "Empresa": "VIVER",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Fios e Tecidos": {
+            "CEDO": {
+                "Empresa": "CEDRO",
+                "Segmento_B3": "Nível 1"
+            },
+            "DOHL": {
+                "Empresa": "DOHLER",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CATA": {
+                "Empresa": "IND CATAGUAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTKA": {
+                "Empresa": "KARSTEN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PTNT": {
+                "Empresa": "PETTENATI",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTSA": {
+                "Empresa": "SANTANENSE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TXRX": {
+                "Empresa": "TEX RENAUX",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Vestuário": {
+            "TFCO": {
+                "Empresa": "TRACK FIELD",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Calçados": {
+            "ALPA": {
+                "Empresa": "ALPARGATAS",
+                "Segmento_B3": "Nível 1"
+            },
+            "CAMB": {
+                "Empresa": "CAMBUCI",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "GRND": {
+                "Empresa": "GRENDENE",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VULC": {
+                "Empresa": "VULCABRAS",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Acessórios": {
+            "MNDL": {
+                "Empresa": "MUNDIAL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TECN": {
+                "Empresa": "TECHNOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VIVA": {
+                "Empresa": "VIVARA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Móveis": {
+            "TOKY": {
+                "Empresa": "GRUPO TOKY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "UCAS": {
+                "Empresa": "UNICASA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WEST": {
+                "Empresa": "WESTWING",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Utensílios Domésticos": {
+            "HETA": {
+                "Empresa": "HERCULES",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Automóveis e Motocicletas": {
+            "AMOB": {
+                "Empresa": "AUTOMOB",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MYPK": {
+                "Empresa": "IOCHP-MAXION",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LEVE": {
+                "Empresa": "METAL LEVE",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PLAS": {
+                "Empresa": "PLASCAR PART",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Hotelaria": {
+            "HOOT": {
+                "Empresa": "HOTEIS OTHON",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Restaurante e Similares": {
+            "MEAL": {
+                "Empresa": "IMC S/A",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Bicicletas": {
+            "BMKS": {
+                "Empresa": "BIC MONARK",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Brinquedos e Jogos": {
+            "ESTR": {
+                "Empresa": "ESTRELA",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produção de Eventos e Shows": {
+            "RVEE": {
+                "Empresa": "REVEE",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AHEB": {
+                "Empresa": "SPTURIS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SHOW": {
+                "Empresa": "TIME FOR FUN",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Viagens e Turismo": {
+            "CVCB": {
+                "Empresa": "CVC BRASIL",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Atividades Esportivas": {
+            "SMFT": {
+                "Empresa": "SMART FIT",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serviços Educacionais": {
+            "ANIM": {
+                "Empresa": "ANIMA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ATED": {
+                "Empresa": "ATOM EDUC",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BIED": {
+                "Empresa": "BIOMA EDUC",
+                "Segmento_B3": "Mais"
+            },
+            "COGN": {
+                "Empresa": "COGNA ON",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSED": {
+                "Empresa": "CRUZEIRO EDU",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SALT": {
+                "Empresa": "GRUPO SALTA",
+                "Segmento_B3": "Nível 2"
+            },
+            "OBTC": {
+                "Empresa": "ORANJEBTC",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SEER": {
+                "Empresa": "SER EDUCA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VTRU": {
+                "Empresa": "VITRUEDUCA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "YDUQ": {
+                "Empresa": "YDUQS PART",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Aluguel de carros": {
+            "RENT": {
+                "Empresa": "LOCALIZA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MOVI": {
+                "Empresa": "MOVIDA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VAMO": {
+                "Empresa": "VAMOS",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Programas de Fidelização": {
+            "DOTZ": {
+                "Empresa": "DOTZ SA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Medicamentos e Outros Produtos": {
+            "BIOM": {
+                "Empresa": "BIOMM",
+                "Segmento_B3": "Mais"
+            },
+            "OFSA": {
+                "Empresa": "OUROFINO S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BLAU": {
+                "Empresa": "BLAU",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DMVF": {
+                "Empresa": "D1000VFARMA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PNVL": {
+                "Empresa": "DIMED",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EUFA": {
+                "Empresa": "EUROFARMA SA",
+                "Segmento_B3": "Mais Nível 2"
+            },
+            "HYPE": {
+                "Empresa": "HYPERA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PGMN": {
+                "Empresa": "PAGUE MENOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PFRM": {
+                "Empresa": "PROFARMA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RADL": {
+                "Empresa": "RAIADROGASIL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VVEO": {
+                "Empresa": "VIVEO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serv.Méd.Hospit.,Análises e Diagnósticos": {
+            "AALR": {
+                "Empresa": "ALLIAR",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DASA": {
+                "Empresa": "DASA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FLRY": {
+                "Empresa": "FLEURY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "HAPV": {
+                "Empresa": "HAPVIDA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MATD": {
+                "Empresa": "MATER DEI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ODPV": {
+                "Empresa": "ODONTOPREV",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ONCO": {
+                "Empresa": "ONCOCLINICAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "QUAL": {
+                "Empresa": "QUALICORP",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RDOR": {
+                "Empresa": "REDE D OR",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Equipamentos": {
+            "BALM": {
+                "Empresa": "BAUMER",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LMED": {
+                "Empresa": "LIFEMED",
+                "Segmento_B3": "Mais"
+            }
+        },
+        "Computadores e Equipamentos": {
+            "INTB": {
+                "Empresa": "INTELBRAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MLAS": {
+                "Empresa": "MULTILASER",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "POSI": {
+                "Empresa": "POSITIVO TEC",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Programas e Serviços": {
+            "BMOB": {
+                "Empresa": "BEMOBI TECH",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BRQB": {
+                "Empresa": "BRQ",
+                "Segmento_B3": "Mais"
+            },
+            "ENJU": {
+                "Empresa": "ENJOEI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IFCM": {
+                "Empresa": "INFRACOMM",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LWSA": {
+                "Empresa": "LWSA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CASH": {
+                "Empresa": "MELIUZ",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NGRD": {
+                "Empresa": "NEOGRID",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PDTC": {
+                "Empresa": "PADTEC",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "QUSW": {
+                "Empresa": "QUALITY SOFT",
+                "Segmento_B3": "Mais"
+            },
+            "TRAD": {
+                "Empresa": "TC",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TOTS": {
+                "Empresa": "TOTVS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WDCN": {
+                "Empresa": "WDC NETWORKS",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Gás": {
+            "CEGR": {
+                "Empresa": "CEG",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CGAS": {
+                "Empresa": "COMGAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PASS": {
+                "Empresa": "COMPASS",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Soc. Crédito e Financiamento": {
+            "MERC": {
+                "Empresa": "MERC FINANC",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Outros Intermediarios Financeiros": {
+            "FIGE": {
+                "Empresa": "INVEST BEMGE",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Securitizadoras de Recebíveis": {
+            "BSCS": {
+                "Empresa": "BRAZILIAN SC",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBRA": {
+                "Empresa": "OPEA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PLSC": {
+                "Empresa": "POLO CAP SEC",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Gestão de Recursos e Investimentos": {
+            "G2DI": {
+                "Empresa": "G2D INVEST",
+                "Segmento_B3": "BDR3"
+            },
+            "PPLA": {
+                "Empresa": "PPLA",
+                "Segmento_B3": "BDR3"
+            }
+        },
+        "Serviços Financeiros Diversos": {
+            "B3SA": {
+                "Empresa": "B3",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSUD": {
+                "Empresa": "CSU DIGITAL",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Corretoras de Seguros e Resseguros": {
+            "WIZC": {
+                "Empresa": "WIZ CO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Exploração de Imóveis": {
+            "ALOS": {
+                "Empresa": "ALLOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GSHP": {
+                "Empresa": "GENERALSHOPP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HBTS": {
+                "Empresa": "HABITASUL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HBRE": {
+                "Empresa": "HBR REALTY",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IGTI": {
+                "Empresa": "IGUATEMI S.A",
+                "Segmento_B3": "Nível 1"
+            },
+            "LOGG": {
+                "Empresa": "LOG COM PROP",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MULT": {
+                "Empresa": "MULTIPLAN",
+                "Segmento_B3": "Nível 2"
+            },
+            "NORD": {
+                "Empresa": "NORDON MET",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PEAB": {
+                "Empresa": "PAR AL BAHIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SCAR": {
+                "Empresa": "SAO CARLOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SYNE": {
+                "Empresa": "SYN PROP TEC",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Intermediação Imobiliária": {
+            "LPSB": {
+                "Empresa": "LOPES BRASIL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NEXP": {
+                "Empresa": "NEXPE",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Holdings Diversificadas": {
+            "ARND": {
+                "Empresa": "ARANDU",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EPAR": {
+                "Empresa": "EMBPAR S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SIMH": {
+                "Empresa": "SIMPAR",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Outros Títulos": {
+            "CTBA": {
+                "Empresa": "CEPAC - CTBA",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "MCRJ": {
+                "Empresa": "CEPAC - MCRJ",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "PMSP": {
+                "Empresa": "CEPAC - PMSP",
+                "Segmento_B3": "Básico Balcão"
+            }
+        },
+        "Outros": {
+            "QVQP": {
+                "Empresa": "524 PARTICIP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BETP": {
+                "Empresa": "BETAPART",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MAPT": {
+                "Empresa": "CEMEPE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPGM": {
+                "Empresa": "GAMA PART",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PPAR": {
+                "Empresa": "POLPAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PRPT": {
+                "Empresa": "PROMPT PART",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPSE": {
+                "Empresa": "SUDESTE S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPTS": {
+                "Empresa": "SUL 116 PART",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        }
+    },
+    "Escolhida": {
+        "Exploração, Refino e Distribuição": {
+            "PETR": {
+                "Empresa": "PETROBRAS",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Minerais Metálicos": {
+            "VALE": {
+                "Empresa": "VALE",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Holdings Diversificadas": {
+            "ITSA": {
+                "Empresa": "ITAUSA",
+                "Segmento_B3": "Nível 1"
+            }
+        }
+    },
+    "Telecom": {
+        "Telecomunicações": {
+            "BRST": {
+                "Empresa": "BRISANET",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DESK": {
+                "Empresa": "DESKTOP",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OIBR": {
+                "Empresa": "OI",
+                "Segmento_B3": "Nível 1"
+            },
+            "TELB": {
+                "Empresa": "TELEBRAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "VIVT": {
+                "Empresa": "TELEF BRASIL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TIMS": {
+                "Empresa": "TIM",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FIQE": {
+                "Empresa": "UNIFIQUE",
+                "Segmento_B3": "Novo Mercado"
+            }
+        }
+    },
+    "Energia": {
+        "Energia Elétrica": {
+            "AESO": {
+                "Empresa": "AESOPERACOES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AFLT": {
+                "Empresa": "AFLUENTE T",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ALUP": {
+                "Empresa": "ALUPAR",
+                "Segmento_B3": "Nível 2"
+            },
+            "CBEE": {
+                "Empresa": "AMPLA ENERG",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AURE": {
+                "Empresa": "AUREN",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AXIA": {
+                "Empresa": "AXIA ENERGIA",
+                "Segmento_B3": "Nível 1"
+            },
+            "CEBR": {
+                "Empresa": "CEB",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CEED": {
+                "Empresa": "CEEE-D",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CLSC": {
+                "Empresa": "CELESC",
+                "Segmento_B3": "Nível 2"
+            },
+            "GPAR": {
+                "Empresa": "CELGPAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CMIG": {
+                "Empresa": "CEMIG",
+                "Segmento_B3": "Nível 1"
+            },
+            "CEEB": {
+                "Empresa": "COELBA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "COCE": {
+                "Empresa": "COELCE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "COMR": {
+                "Empresa": "COMERC PAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CPLE": {
+                "Empresa": "COPEL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CPFE": {
+                "Empresa": "CPFL ENERGIA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EKTR": {
+                "Empresa": "ELEKTRO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EMAE": {
+                "Empresa": "EMAE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ENGI": {
+                "Empresa": "ENERGISA",
+                "Segmento_B3": "Nível 2"
+            },
+            "ENMT": {
+                "Empresa": "ENERGISA MT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ENEV": {
+                "Empresa": "ENEVA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EGIE": {
+                "Empresa": "ENGIE BRASIL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EQPA": {
+                "Empresa": "EQTL PARA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EQMA": {
+                "Empresa": "EQTLMARANHAO",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "EQTL": {
+                "Empresa": "EQUATORIAL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GEPA": {
+                "Empresa": "GER PARANAP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ISAE": {
+                "Empresa": "ISA ENERGIA",
+                "Segmento_B3": "Nível 1"
+            },
+            "LIGH": {
+                "Empresa": "LIGHT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LIGT": {
+                "Empresa": "LIGHT S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NEOE": {
+                "Empresa": "NEOENERGIA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRMN": {
+                "Empresa": "PROMAN",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "REDE": {
+                "Empresa": "REDE ENERGIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RNEW": {
+                "Empresa": "RENOVA",
+                "Segmento_B3": "Nível 2"
+            },
+            "RIOS": {
+                "Empresa": "RIO ALTO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TAEE": {
+                "Empresa": "TAESA",
+                "Segmento_B3": "Nível 2"
+            }
+        }
+    },
+    "Saneamento": {
+        "Água e Saneamento": {
+            "AMBP": {
+                "Empresa": "AMBIPAR",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CASN": {
+                "Empresa": "CASAN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CSMG": {
+                "Empresa": "COPASA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IGSN": {
+                "Empresa": "IGUA SA",
+                "Segmento_B3": "Mais"
+            },
+            "ORVR": {
+                "Empresa": "ORIZON",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SBSP": {
+                "Empresa": "SABESP",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SAPR": {
+                "Empresa": "SANEPAR",
+                "Segmento_B3": "Nível 2"
+            }
+        }
+    },
+    "Bancos": {
+        "Bancos": {
+            "ABCB": {
+                "Empresa": "ABC BRASIL",
+                "Segmento_B3": "Nível 2"
+            },
+            "RPAD": {
+                "Empresa": "ALFA HOLDING",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BAZA": {
+                "Empresa": "AMAZONIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BMGB": {
+                "Empresa": "BANCO BMG",
+                "Segmento_B3": "Nível 1"
+            },
+            "BGIP": {
+                "Empresa": "BANESE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BEES": {
+                "Empresa": "BANESTES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BPAR": {
+                "Empresa": "BANPARA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BRSR": {
+                "Empresa": "BANRISUL",
+                "Segmento_B3": "Nível 1"
+            },
+            "BRBI": {
+                "Empresa": "BR PARTNERS",
+                "Segmento_B3": "Nível 2"
+            },
+            "BBDC": {
+                "Empresa": "BRADESCO",
+                "Segmento_B3": "Nível 1"
+            },
+            "BBAS": {
+                "Empresa": "BRASIL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BSLI": {
+                "Empresa": "BRB BANCO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BPAC": {
+                "Empresa": "BTGP BANCO",
+                "Segmento_B3": "Nível 2"
+            },
+            "INBR": {
+                "Empresa": "INTER CO",
+                "Segmento_B3": "BDR2"
+            },
+            "ITUB": {
+                "Empresa": "ITAUUNIBANCO",
+                "Segmento_B3": "Nível 1"
+            },
+            "BMIN": {
+                "Empresa": "MERC INVEST",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BMEB": {
+                "Empresa": "MERCANTIL",
+                "Segmento_B3": "Nível 1"
+            },
+            "BNBR": {
+                "Empresa": "NORD BRASIL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PINE": {
+                "Empresa": "PINE",
+                "Segmento_B3": "Nível 2"
+            },
+            "SANB": {
+                "Empresa": "SANTANDER BR",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        }
+    },
+    "Seguros": {
+        "Seguradoras": {
+            "BBSE": {
+                "Empresa": "BBSEGURIDADE",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CXSE": {
+                "Empresa": "CAIXA SEGURI",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PSSA": {
+                "Empresa": "PORTO SEGURO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Resseguradoras": {
+            "IRBR": {
+                "Empresa": "IRBBRASIL RE",
+                "Segmento_B3": "Novo Mercado"
+            }
+        }
+    }
+}

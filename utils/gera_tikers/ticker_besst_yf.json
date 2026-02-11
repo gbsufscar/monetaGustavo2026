@@ -1,0 +1,2124 @@
+{
+    "Outra": {
+        "Exploração, Refino e Distribuição": {
+            "AZTE11.SA": {
+                "Empresa": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AZTE3.SA": {
+                "Empresa": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BRAV3.SA": {
+                "Empresa": "BRAVA ENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSAN3.SA": {
+                "Empresa": "COSAN S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RPMG3.SA": {
+                "Empresa": "REFINARIA DE PETROLEOS MANGUINHOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RECV3.SA": {
+                "Empresa": "PETRORECÔNCAVO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRIO3.SA": {
+                "Empresa": "PRIO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RAIZ3.SA": {
+                "Empresa": "RAIZEN S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "RAIZ4.SA": {
+                "Empresa": "RAIZEN S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "UGPA3.SA": {
+                "Empresa": "ULTRAPAR PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Equipamentos e Serviços": {
+            "LUPA3.SA": {
+                "Empresa": "LUPATECH S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OPCT3.SA": {
+                "Empresa": "OCEANPACT SERVICOS MARITIMOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OSXB3.SA": {
+                "Empresa": "OSX BRASIL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Distribuição de Combustíveis": {
+            "VBBR3.SA": {
+                "Empresa": "VIBRA ENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Minerais Metálicos": {
+            "AURA": {
+                "Empresa": "AURA 360",
+                "Segmento_B3": "BDR3"
+            },
+            "BRAP3.SA": {
+                "Empresa": "BRADESPAR S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BRAP4.SA": {
+                "Empresa": "BRADESPAR S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "CBAV3.SA": {
+                "Empresa": "COMPANHIA BRASILEIRA DE ALUMÍNIO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CMIN3.SA": {
+                "Empresa": "CSN MINERAÇÃO S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "LTEL": {
+                "Empresa": "LITEL",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "LTLA": {
+                "Empresa": "LITELA",
+                "Segmento_B3": "Básico Balcão"
+            }
+        },
+        "Siderurgia": {
+            "FESA3.SA": {
+                "Empresa": "CIA FERRO LIGAS DA BAHIA - FERBASA",
+                "Segmento_B3": "Nível 1"
+            },
+            "FESA4.SA": {
+                "Empresa": "CIA FERRO LIGAS DA BAHIA - FERBASA",
+                "Segmento_B3": "Nível 1"
+            },
+            "GGBR3.SA": {
+                "Empresa": "GERDAU S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "GGBR4.SA": {
+                "Empresa": "GERDAU S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "GOAU3.SA": {
+                "Empresa": "METALURGICA GERDAU S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "GOAU4.SA": {
+                "Empresa": "METALURGICA GERDAU S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "CSNA3.SA": {
+                "Empresa": "CIA SIDERURGICA NACIONAL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "USIM3.SA": {
+                "Empresa": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Artefatos de Ferro e Aço": {
+            "HAGA3.SA": {
+                "Empresa": "HAGA S.A. INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HAGA4.SA": {
+                "Empresa": "HAGA S.A. INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MGEL3.SA": {
+                "Empresa": "MANGELS INDUSTRIAL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MGEL4.SA": {
+                "Empresa": "MANGELS INDUSTRIAL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PATI3.SA": {
+                "Empresa": "PANATLANTICA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PATI4.SA": {
+                "Empresa": "PANATLANTICA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TKNO3.SA": {
+                "Empresa": "TEKNO S.A. - INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TKNO4.SA": {
+                "Empresa": "TEKNO S.A. - INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Artefatos de Cobre": {
+            "PMAM3.SA": {
+                "Empresa": "PARANAPANEMA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Petroquímicos": {
+            "BRKM3.SA": {
+                "Empresa": "BRASKEM S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "DEXP3.SA": {
+                "Empresa": "DEXXOS PARTICIPACOES S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "DEXP4.SA": {
+                "Empresa": "DEXXOS PARTICIPACOES S.A.",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Fertilizantes e Defensivos": {
+            "FHER3.SA": {
+                "Empresa": "FERTILIZANTES HERINGER S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NUTR3.SA": {
+                "Empresa": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "VITT3.SA": {
+                "Empresa": "VITTIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Químicos Diversos": {
+            "CRPG3.SA": {
+                "Empresa": "TRONOX PIGMENTOS DO BRASIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "UNIP3.SA": {
+                "Empresa": "UNIPAR CARBOCLORO S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Madeira": {
+            "DXCO3.SA": {
+                "Empresa": "DEXCO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EUCA3.SA": {
+                "Empresa": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Nível 1"
+            },
+            "EUCA4.SA": {
+                "Empresa": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+                "Segmento_B3": "Nível 1"
+            }
+        },
+        "Papel e Celulose": {
+            "KLBN11.SA": {
+                "Empresa": "KLABIN S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "KLBN3.SA": {
+                "Empresa": "KLABIN S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "KLBN4.SA": {
+                "Empresa": "KLABIN S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "MSPA3.SA": {
+                "Empresa": "CIA MELHORAMENTOS DE SAO PAULO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MSPA4.SA": {
+                "Empresa": "CIA MELHORAMENTOS DE SAO PAULO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "NEMO3.SA": {
+                "Empresa": "SUZANO HOLDING S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SUZB3.SA": {
+                "Empresa": "SUZANO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Embalagens": {
+            "RANI3.SA": {
+                "Empresa": "IRANI PAPEL E EMBALAGEM S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Materiais Diversos": {
+            "SNSY3.SA": {
+                "Empresa": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos para Construção": {
+            "ETER3.SA": {
+                "Empresa": "ETERNIT S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PTBL3.SA": {
+                "Empresa": "PBG S/A",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Construção Pesada": {
+            "AZEV11.SA": {
+                "Empresa": "AZEVEDO E TRAVASSOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AZEV3.SA": {
+                "Empresa": "AZEVEDO E TRAVASSOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AZEV4.SA": {
+                "Empresa": "AZEVEDO E TRAVASSOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Engenharia Consultiva": {
+            "SOND3.SA": {
+                "Empresa": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Serviços Diversos": {
+            "ARML3.SA": {
+                "Empresa": "ARMAC LOCAÇÃO, LOGÍSTICA E SERVIÇOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MILS3.SA": {
+                "Empresa": "MILLS LOCAÇÃO, SERVIÇOS E LOGÍSTICA S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRNR3.SA": {
+                "Empresa": "PRINER SERVIÇOS INDUSTRIAIS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BBML3.SA": {
+                "Empresa": "BBM LOGISTICA S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "CTAX3.SA": {
+                "Empresa": "CONTAX PARTICIPAÇÕES S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "DTCY3.SA": {
+                "Empresa": "DTCOM - DIRECT TO COMPANY S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "DTCY4.SA": {
+                "Empresa": "DTCOM - DIRECT TO COMPANY S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ALPK3.SA": {
+                "Empresa": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GGPS3.SA": {
+                "Empresa": "GPS PARTICIPACOES E EMPREENDIMENTOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VLID3.SA": {
+                "Empresa": "VALID SOLUÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ADMF3.SA": {
+                "Empresa": "CIABRASF CIA BRASILEIRA DE SERVIÇOS FINANCEIROS SA",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Material Aeronáutico e de Defesa": {
+            "EMBJ3.SA": {
+                "Empresa": "EMBRAER S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Material Rodoviário": {
+            "FRAS3.SA": {
+                "Empresa": "FRASLE MOBILITY S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "POMO3.SA": {
+                "Empresa": "MARCOPOLO S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "POMO4.SA": {
+                "Empresa": "MARCOPOLO S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "RAPT3.SA": {
+                "Empresa": "RANDONCORP S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "RAPT4.SA": {
+                "Empresa": "RANDONCORP S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "RCSL3.SA": {
+                "Empresa": "RECRUSUL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RCSL4.SA": {
+                "Empresa": "RECRUSUL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RSUL3.SA": {
+                "Empresa": "METALURGICA RIOSULENSE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RSUL4.SA": {
+                "Empresa": "METALURGICA RIOSULENSE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TUPY3.SA": {
+                "Empresa": "TUPY S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MWET3.SA": {
+                "Empresa": "WETZEL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MWET4.SA": {
+                "Empresa": "WETZEL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Motores , Compressores e Outros": {
+            "SHUL3.SA": {
+                "Empresa": "SCHULZ S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SHUL4.SA": {
+                "Empresa": "SCHULZ S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WEGE3.SA": {
+                "Empresa": "WEG S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Máq. e Equip. Industriais": {
+            "EALT3.SA": {
+                "Empresa": "ELECTRO ACO ALTONA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EALT4.SA": {
+                "Empresa": "ELECTRO ACO ALTONA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AERI3.SA": {
+                "Empresa": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BDLL3.SA": {
+                "Empresa": "BARDELLA S.A. INDUSTRIAS MECANICAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BDLL4.SA": {
+                "Empresa": "BARDELLA S.A. INDUSTRIAS MECANICAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "INEP3.SA": {
+                "Empresa": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "INEP4.SA": {
+                "Empresa": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "KEPL3.SA": {
+                "Empresa": "KEPLER WEBER S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FRIO3.SA": {
+                "Empresa": "METALFRIO SOLUTIONS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PTCA3.SA": {
+                "Empresa": "PRATICA PRODUTOS S.A.",
+                "Segmento_B3": "Mais Nível 2"
+            },
+            "ROMI3.SA": {
+                "Empresa": "ROMI S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Máq. e Equip. Construção e Agrícolas": {
+            "MTSA3.SA": {
+                "Empresa": "METISA METALURGICA TIMBOENSE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MTSA4.SA": {
+                "Empresa": "METISA METALURGICA TIMBOENSE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Armas e Munições": {
+            "TASA3.SA": {
+                "Empresa": "TAURUS ARMAS S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "TASA4.SA": {
+                "Empresa": "TAURUS ARMAS S.A.",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Linhas Aéreas de Passageiros": {
+            "AZUL11.SA": {
+                "Empresa": "AZUL S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "GOLL": {
+                "Empresa": "GOL",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Transporte Ferroviário": {
+            "VSPT3.SA": {
+                "Empresa": "FERROVIA CENTRO-ATLANTICA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "VSPT4.SA": {
+                "Empresa": "FERROVIA CENTRO-ATLANTICA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MRSA": {
+                "Empresa": "MRS LOGIST",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "RAIL3.SA": {
+                "Empresa": "RUMO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Transporte Hidroviário": {
+            "HBSA3.SA": {
+                "Empresa": "HIDROVIAS DO BRASIL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LOGN3.SA": {
+                "Empresa": "LOG-IN LOGISTICA INTERMODAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LUXM3.SA": {
+                "Empresa": "TREVISA INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LUXM4.SA": {
+                "Empresa": "TREVISA INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Transporte Rodoviário": {
+            "JSLG3.SA": {
+                "Empresa": "JSL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SEQL3.SA": {
+                "Empresa": "SEQUOIA LOGISTICA E TRANSPORTES S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TGMA3.SA": {
+                "Empresa": "TEGMA GESTAO LOGISTICA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Exploração de Rodovias": {
+            "CRTE3.SA": {
+                "Empresa": "CONC RIO-TERESOPOLIS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ECOR3.SA": {
+                "Empresa": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MOTV3.SA": {
+                "Empresa": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TPIS3.SA": {
+                "Empresa": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serviços de Apoio e Armazenagem": {
+            "AGRU": {
+                "Empresa": "GRUAIRPORT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HMOB3.SA": {
+                "Empresa": "HMOBI PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "IVPR": {
+                "Empresa": "INVEPAR",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "PSVM11.SA": {
+                "Empresa": "PORTO SUDESTE V.M. S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Material de Transporte": {
+            "MMAQ3.SA": {
+                "Empresa": "MINASMAQUINAS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MMAQ4.SA": {
+                "Empresa": "MINASMAQUINAS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBNS11.SA": {
+                "Empresa": "RODOBENS S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBNS3.SA": {
+                "Empresa": "RODOBENS S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBNS4.SA": {
+                "Empresa": "RODOBENS S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WLMM3.SA": {
+                "Empresa": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WLMM4.SA": {
+                "Empresa": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Agricultura": {
+            "TTEN3.SA": {
+                "Empresa": "TRÊS TENTOS AGROINDUSTRIAL S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AGXY3.SA": {
+                "Empresa": "AGROGALAXY PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "APTI3.SA": {
+                "Empresa": "ALIPERTI S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "APTI4.SA": {
+                "Empresa": "ALIPERTI S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SOJA3.SA": {
+                "Empresa": "BOA SAFRA SEMENTES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AGRO3.SA": {
+                "Empresa": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CTCA3.SA": {
+                "Empresa": "CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "EGGY3.SA": {
+                "Empresa": "GRANJA FARIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SLCE3.SA": {
+                "Empresa": "SLC AGRICOLA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LAND3.SA": {
+                "Empresa": "TERRA SANTA PROPRIEDADES AGRICOLAS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Açucar e Alcool": {
+            "JALL3.SA": {
+                "Empresa": "JALLES MACHADO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SMTO3.SA": {
+                "Empresa": "SAO MARTINHO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Carnes e Derivados": {
+            "BAUH3.SA": {
+                "Empresa": "EXCELSIOR ALIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BAUH4.SA": {
+                "Empresa": "EXCELSIOR ALIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "FICT3.SA": {
+                "Empresa": "FICTOR ALIMENTOS S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "JBSS": {
+                "Empresa": "JBS N.V.",
+                "Segmento_B3": "BDR2"
+            },
+            "MBRF3.SA": {
+                "Empresa": "MARFRIG GLOBAL FOODS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BEEF11.SA": {
+                "Empresa": "MINERVA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BEEF3.SA": {
+                "Empresa": "MINERVA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MNPR3.SA": {
+                "Empresa": "MINUPAR PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Alimentos Diversos": {
+            "CAML3.SA": {
+                "Empresa": "CAMIL ALIMENTOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "JOPA3.SA": {
+                "Empresa": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "JOPA4.SA": {
+                "Empresa": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MDIA3.SA": {
+                "Empresa": "M.DIAS BRANCO S.A. IND COM DE ALIMENTOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ODER3.SA": {
+                "Empresa": "CONSERVAS ODERICH S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ODER4.SA": {
+                "Empresa": "CONSERVAS ODERICH S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Cervejas e Refrigerantes": {
+            "ABEV3.SA": {
+                "Empresa": "AMBEV S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos de Cuidado Pessoal": {
+            "ESPA3.SA": {
+                "Empresa": "MPM CORPÓREOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NATU3.SA": {
+                "Empresa": "NATURA COSMETICOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Produtos de Limpeza": {
+            "BOBR3.SA": {
+                "Empresa": "BOMBRIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BOBR4.SA": {
+                "Empresa": "BOMBRIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Alimentos": {
+            "ASAI3.SA": {
+                "Empresa": "SENDAS DISTRIBUIDORA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GMAT3.SA": {
+                "Empresa": "GRUPO MATEUS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PCAR3.SA": {
+                "Empresa": "CIA BRASILEIRA DE DISTRIBUICAO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Tecidos, Vestuário e Calçados": {
+            "AZZA3.SA": {
+                "Empresa": "AZZAS 2154 S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CEAB3.SA": {
+                "Empresa": "CEA MODAS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CGRA3.SA": {
+                "Empresa": "GRAZZIOTIN S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CGRA4.SA": {
+                "Empresa": "GRAZZIOTIN S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AMAR3.SA": {
+                "Empresa": "MARISA LOJAS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LREN3.SA": {
+                "Empresa": "LOJAS RENNER S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RIAA3.SA": {
+                "Empresa": "GUARARAPES CONFECCOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VSTE3.SA": {
+                "Empresa": "VESTE S.A. ESTILO",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Eletrodomésticos": {
+            "ALLD3.SA": {
+                "Empresa": "ALLIED TECNOLOGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BHIA3.SA": {
+                "Empresa": "GRUPO CASAS BAHIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MGLU3.SA": {
+                "Empresa": "MAGAZINE LUIZA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WHRL3.SA": {
+                "Empresa": "WHIRLPOOL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "WHRL4.SA": {
+                "Empresa": "WHIRLPOOL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produtos Diversos": {
+            "AMER11.SA": {
+                "Empresa": "AMERICANAS S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AMER3.SA": {
+                "Empresa": "AMERICANAS S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SBFG3.SA": {
+                "Empresa": "GRUPO SBF SA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LLBI3.SA": {
+                "Empresa": "CVLB BRASIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AUAU3.SA": {
+                "Empresa": "UNIÃO PET PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LJQQ3.SA": {
+                "Empresa": "LOJAS QUERO-QUERO S/A",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Incorporações": {
+            "AVLL11.SA": {
+                "Empresa": "ALPHAVILLE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AVLL3.SA": {
+                "Empresa": "ALPHAVILLE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CALI11.SA": {
+                "Empresa": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CALI3.SA": {
+                "Empresa": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CURY3.SA": {
+                "Empresa": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CYRE3.SA": {
+                "Empresa": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CYRE4.SA": {
+                "Empresa": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DIRR3.SA": {
+                "Empresa": "DIRECIONAL ENGENHARIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EVEN3.SA": {
+                "Empresa": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EZTC3.SA": {
+                "Empresa": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FIEI3.SA": {
+                "Empresa": "FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "GFSA3.SA": {
+                "Empresa": "GAFISA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "HBOR3.SA": {
+                "Empresa": "HELBOR EMPREENDIMENTOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "INNC3.SA": {
+                "Empresa": "INC EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "JHSF3.SA": {
+                "Empresa": "JHSF PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "JFEN3.SA": {
+                "Empresa": "JOAO FORTES ENGENHARIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "KLAS3.SA": {
+                "Empresa": "KALLAS INCORPORACOES E CONSTRUCOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LAVV3.SA": {
+                "Empresa": "LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MELK3.SA": {
+                "Empresa": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MTRE3.SA": {
+                "Empresa": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MDNE3.SA": {
+                "Empresa": "MOURA DUBEUX ENGENHARIA S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MRVE3.SA": {
+                "Empresa": "MRV ENGENHARIA E PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PDGR3.SA": {
+                "Empresa": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PLPL3.SA": {
+                "Empresa": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CCTY3.SA": {
+                "Empresa": "BELORA RDVC CITY DESENVOLVIMENTO  IMOBILIÁRIO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RSID3.SA": {
+                "Empresa": "ROSSI RESIDENCIAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TCSA3.SA": {
+                "Empresa": "TECNISA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TEND3.SA": {
+                "Empresa": "CONSTRUTORA TENDA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TRIS3.SA": {
+                "Empresa": "TRISUL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VIVR11.SA": {
+                "Empresa": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VIVR3.SA": {
+                "Empresa": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Fios e Tecidos": {
+            "CEDO3.SA": {
+                "Empresa": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
+                "Segmento_B3": "Nível 1"
+            },
+            "CEDO4.SA": {
+                "Empresa": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
+                "Segmento_B3": "Nível 1"
+            },
+            "DOHL3.SA": {
+                "Empresa": "DOHLER S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "DOHL4.SA": {
+                "Empresa": "DOHLER S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CATA3.SA": {
+                "Empresa": "CIA INDUSTRIAL CATAGUASES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CATA4.SA": {
+                "Empresa": "CIA INDUSTRIAL CATAGUASES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTKA3.SA": {
+                "Empresa": "KARSTEN S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTKA4.SA": {
+                "Empresa": "KARSTEN S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PTNT3.SA": {
+                "Empresa": "PETTENATI S.A. INDUSTRIA TEXTIL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PTNT4.SA": {
+                "Empresa": "PETTENATI S.A. INDUSTRIA TEXTIL",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTSA3.SA": {
+                "Empresa": "CIA TECIDOS SANTANENSE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CTSA4.SA": {
+                "Empresa": "CIA TECIDOS SANTANENSE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TXRX11.SA": {
+                "Empresa": "TEXTIL RENAUXVIEW S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TXRX3.SA": {
+                "Empresa": "TEXTIL RENAUXVIEW S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TXRX4.SA": {
+                "Empresa": "TEXTIL RENAUXVIEW S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Vestuário": {
+            "TFCO3.SA": {
+                "Empresa": "TRACK & FIELD CO S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "TFCO4.SA": {
+                "Empresa": "TRACK & FIELD CO S.A.",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Calçados": {
+            "ALPA3.SA": {
+                "Empresa": "ALPARGATAS S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "ALPA4.SA": {
+                "Empresa": "ALPARGATAS S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "CAMB3.SA": {
+                "Empresa": "CAMBUCI S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "GRND3.SA": {
+                "Empresa": "GRENDENE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VULC3.SA": {
+                "Empresa": "VULCABRAS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Acessórios": {
+            "MNDL3.SA": {
+                "Empresa": "MUNDIAL S.A. - PRODUTOS DE CONSUMO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TECN3.SA": {
+                "Empresa": "TECHNOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VIVA3.SA": {
+                "Empresa": "VIVARA PARTICIPAÇOES S.A",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Móveis": {
+            "TOKY11.SA": {
+                "Empresa": "GRUPO TOKY S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TOKY3.SA": {
+                "Empresa": "GRUPO TOKY S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "UCAS3.SA": {
+                "Empresa": "UNICASA INDÚSTRIA DE MÓVEIS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WEST3.SA": {
+                "Empresa": "WESTWING COMERCIO VAREJISTA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Utensílios Domésticos": {
+            "HETA3.SA": {
+                "Empresa": "HERCULES S.A. FABRICA DE TALHERES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HETA4.SA": {
+                "Empresa": "HERCULES S.A. FABRICA DE TALHERES",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Automóveis e Motocicletas": {
+            "AMOB3.SA": {
+                "Empresa": "AUTOMOB PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MYPK3.SA": {
+                "Empresa": "IOCHPE MAXION S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LEVE3.SA": {
+                "Empresa": "MAHLE-METAL LEVE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PLAS3.SA": {
+                "Empresa": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Hotelaria": {
+            "HOOT3.SA": {
+                "Empresa": "HOTEIS OTHON S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HOOT4.SA": {
+                "Empresa": "HOTEIS OTHON S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Restaurante e Similares": {
+            "MEAL3.SA": {
+                "Empresa": "INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Bicicletas": {
+            "BMKS3.SA": {
+                "Empresa": "BICICLETAS MONARK S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Brinquedos e Jogos": {
+            "ESTR3.SA": {
+                "Empresa": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ESTR4.SA": {
+                "Empresa": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Produção de Eventos e Shows": {
+            "RVEE3.SA": {
+                "Empresa": "REVEE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AHEB3.SA": {
+                "Empresa": "SAO PAULO TURISMO S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SHOW3.SA": {
+                "Empresa": "T4F ENTRETENIMENTO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Viagens e Turismo": {
+            "CVCB3.SA": {
+                "Empresa": "CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Atividades Esportivas": {
+            "SMFT3.SA": {
+                "Empresa": "SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serviços Educacionais": {
+            "ANIM3.SA": {
+                "Empresa": "ANIMA HOLDING S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ATED3.SA": {
+                "Empresa": "ATOM EDUCAÇÃO E EDITORA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BIED3.SA": {
+                "Empresa": "BIOMA EDUCAÇÃO S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "COGN3.SA": {
+                "Empresa": "COGNA EDUCAÇÃO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSED3.SA": {
+                "Empresa": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SALT3.SA": {
+                "Empresa": "GRUPO SALTA EDUCAÇÃO S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "OBTC11.SA": {
+                "Empresa": "ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OBTC3.SA": {
+                "Empresa": "ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SEER3.SA": {
+                "Empresa": "SER EDUCACIONAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VTRU3.SA": {
+                "Empresa": "VITRU EDUCAÇÃO S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "YDUQ3.SA": {
+                "Empresa": "YDUQS PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Aluguel de carros": {
+            "RENT3.SA": {
+                "Empresa": "LOCALIZA RENT A CAR S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RENT4.SA": {
+                "Empresa": "LOCALIZA RENT A CAR S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MOVI3.SA": {
+                "Empresa": "MOVIDA PARTICIPACOES SA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VAMO3.SA": {
+                "Empresa": "VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIP. S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Programas de Fidelização": {
+            "DOTZ3.SA": {
+                "Empresa": "DOTZ S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Medicamentos e Outros Produtos": {
+            "BIOM11.SA": {
+                "Empresa": "BIOMM S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "BIOM3.SA": {
+                "Empresa": "BIOMM S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "OFSA3.SA": {
+                "Empresa": "OUROFINO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BLAU3.SA": {
+                "Empresa": "BLAU FARMACÊUTICA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DMVF3.SA": {
+                "Empresa": "D1000 VAREJO FARMA PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PNVL3.SA": {
+                "Empresa": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EUFA3.SA": {
+                "Empresa": "EUROFARMA LABORATORIOS S.A",
+                "Segmento_B3": "Mais Nível 2"
+            },
+            "HYPE3.SA": {
+                "Empresa": "HYPERA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PGMN3.SA": {
+                "Empresa": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PFRM3.SA": {
+                "Empresa": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RADL3.SA": {
+                "Empresa": "RAIA DROGASIL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "VVEO3.SA": {
+                "Empresa": "CM HOSPITALAR S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Serv.Méd.Hospit.,Análises e Diagnósticos": {
+            "AALR3.SA": {
+                "Empresa": "ALLIANÇA SAÚDE E PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DASA3.SA": {
+                "Empresa": "DIAGNOSTICOS DA AMERICA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FLRY3.SA": {
+                "Empresa": "FLEURY S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "HAPV3.SA": {
+                "Empresa": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MATD3.SA": {
+                "Empresa": "HOSPITAL MATER DEI S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ODPV3.SA": {
+                "Empresa": "ODONTOPREV S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ONCO11.SA": {
+                "Empresa": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ONCO3.SA": {
+                "Empresa": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "QUAL3.SA": {
+                "Empresa": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "RDOR3.SA": {
+                "Empresa": "REDE DOR SÃO LUIZ S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Equipamentos": {
+            "BALM3.SA": {
+                "Empresa": "BAUMER S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BALM4.SA": {
+                "Empresa": "BAUMER S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LMED3.SA": {
+                "Empresa": "LIFEMED INDUSTRIAL EQUIP. DE ART. MÉD. HOSP. S.A.",
+                "Segmento_B3": "Mais"
+            }
+        },
+        "Computadores e Equipamentos": {
+            "INTB3.SA": {
+                "Empresa": "INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MLAS3.SA": {
+                "Empresa": "GRUPO MULTI S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "POSI3.SA": {
+                "Empresa": "POSITIVO TECNOLOGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Programas e Serviços": {
+            "BMOB3.SA": {
+                "Empresa": "BEMOBI MOBILE TECH S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BRQB3.SA": {
+                "Empresa": "BRQ SOLUCOES EM INFORMATICA S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "ENJU3.SA": {
+                "Empresa": "ENJOEI S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IFCM3.SA": {
+                "Empresa": "INFRACOMMERCE CXAAS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LWSA3.SA": {
+                "Empresa": "LWSA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CASH3.SA": {
+                "Empresa": "MÉLIUZ S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NGRD3.SA": {
+                "Empresa": "NEOGRID PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PDTC3.SA": {
+                "Empresa": "PADTEC HOLDING S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "QUSW3.SA": {
+                "Empresa": "QUALITY SOFTWARE S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "TRAD3.SA": {
+                "Empresa": "TC S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "TOTS3.SA": {
+                "Empresa": "TOTVS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "WDCN3.SA": {
+                "Empresa": "LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Gás": {
+            "CEGR3.SA": {
+                "Empresa": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CGAS3.SA": {
+                "Empresa": "CIA GAS DE SAO PAULO - COMGAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PASS3.SA": {
+                "Empresa": "COMPASS GAS E ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Soc. Crédito e Financiamento": {
+            "MERC3.SA": {
+                "Empresa": "MERCANTIL FINANCEIRA S.A.  CRED, FINANC, E INVEST",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MERC4.SA": {
+                "Empresa": "MERCANTIL FINANCEIRA S.A.  CRED, FINANC, E INVEST",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Outros Intermediarios Financeiros": {
+            "FIGE3.SA": {
+                "Empresa": "INVESTIMENTOS BEMGE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "FIGE4.SA": {
+                "Empresa": "INVESTIMENTOS BEMGE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Securitizadoras de Recebíveis": {
+            "BSCS": {
+                "Empresa": "BRAZILIAN SC",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RBRA": {
+                "Empresa": "OPEA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PLSC": {
+                "Empresa": "POLO CAP SEC",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Gestão de Recursos e Investimentos": {
+            "G2DI": {
+                "Empresa": "G2D INVEST",
+                "Segmento_B3": "BDR3"
+            },
+            "PPLA11.SA": {
+                "Empresa": "PPLA PARTICIPATIONS LTD.",
+                "Segmento_B3": "BDR3"
+            }
+        },
+        "Serviços Financeiros Diversos": {
+            "B3SA3.SA": {
+                "Empresa": "B3 S.A. - BRASIL, BOLSA, BALCÃO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CSUD3.SA": {
+                "Empresa": "CSU DIGITAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Corretoras de Seguros e Resseguros": {
+            "WIZC3.SA": {
+                "Empresa": "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Exploração de Imóveis": {
+            "ALOS3.SA": {
+                "Empresa": "ALLOS S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GSHP3.SA": {
+                "Empresa": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HBTS3.SA": {
+                "Empresa": "CIA HABITASUL DE PARTICIPACOES",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "HBRE3.SA": {
+                "Empresa": "HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IGTI11.SA": {
+                "Empresa": "IGUATEMI S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "IGTI3.SA": {
+                "Empresa": "IGUATEMI S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "IGTI4.SA": {
+                "Empresa": "IGUATEMI S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "LOGG3.SA": {
+                "Empresa": "LOG COMMERCIAL PROPERTIES",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "MULT3.SA": {
+                "Empresa": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "NORD3.SA": {
+                "Empresa": "NORDON INDUSTRIAS METALURGICAS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PEAB3.SA": {
+                "Empresa": "CIA PARTICIPACOES ALIANCA DA BAHIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PEAB4.SA": {
+                "Empresa": "CIA PARTICIPACOES ALIANCA DA BAHIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SCAR3.SA": {
+                "Empresa": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SYNE3.SA": {
+                "Empresa": "SYN PROP E TECH S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Intermediação Imobiliária": {
+            "LPSB3.SA": {
+                "Empresa": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NEXP3.SA": {
+                "Empresa": "NEXPE PARTICIPAÇÕES S.A",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        },
+        "Holdings Diversificadas": {
+            "ARND3.SA": {
+                "Empresa": "ARANDU INVESTIMENTOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EPAR3.SA": {
+                "Empresa": "EMBPAR PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SIMH3.SA": {
+                "Empresa": "SIMPAR S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Outros Títulos": {
+            "CTBA": {
+                "Empresa": "CEPAC - CTBA",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "MCRJ": {
+                "Empresa": "CEPAC - MCRJ",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "PMSP": {
+                "Empresa": "CEPAC - PMSP",
+                "Segmento_B3": "Básico Balcão"
+            }
+        },
+        "Outros": {
+            "QVQP3.SA": {
+                "Empresa": "524 PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BETP3.SA": {
+                "Empresa": "BETAPART PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MAPT3.SA": {
+                "Empresa": "CEMEPE INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "MAPT4.SA": {
+                "Empresa": "CEMEPE INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPGM3.SA": {
+                "Empresa": "GAMA PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PPAR3.SA": {
+                "Empresa": "POLPAR S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PPAR4.SA": {
+                "Empresa": "POLPAR S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PRPT3.SA": {
+                "Empresa": "PROMPT PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPSE3.SA": {
+                "Empresa": "SUDESTE S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "OPTS3.SA": {
+                "Empresa": "SUL 116 PARTICIPACOES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        }
+    },
+    "Escolhida": {
+        "Exploração, Refino e Distribuição": {
+            "PETR3.SA": {
+                "Empresa": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+                "Segmento_B3": "Nível 2"
+            },
+            "PETR4.SA": {
+                "Empresa": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+                "Segmento_B3": "Nível 2"
+            }
+        },
+        "Minerais Metálicos": {
+            "VALE3.SA": {
+                "Empresa": "VALE S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Holdings Diversificadas": {
+            "ITSA3.SA": {
+                "Empresa": "ITAUSA S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "ITSA4.SA": {
+                "Empresa": "ITAUSA S.A.",
+                "Segmento_B3": "Nível 1"
+            }
+        }
+    },
+    "Telecom": {
+        "Telecomunicações": {
+            "BRST3.SA": {
+                "Empresa": "BRISANET SERVIÇOS DE TELECOMUNICAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "DESK3.SA": {
+                "Empresa": "DESKTOP S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "OIBR3.SA": {
+                "Empresa": "OI S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "OIBR4.SA": {
+                "Empresa": "OI S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "TELB3.SA": {
+                "Empresa": "TELEC BRASILEIRAS S.A. TELEBRAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TELB4.SA": {
+                "Empresa": "TELEC BRASILEIRAS S.A. TELEBRAS",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "VIVT3.SA": {
+                "Empresa": "TELEFÔNICA BRASIL S.A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TIMS3.SA": {
+                "Empresa": "TIM S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "FIQE3.SA": {
+                "Empresa": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        }
+    },
+    "Energia": {
+        "Energia Elétrica": {
+            "AESO3.SA": {
+                "Empresa": "AUREN OPERAÇÕES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AFLT3.SA": {
+                "Empresa": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ALUP11.SA": {
+                "Empresa": "ALUPAR INVESTIMENTO S/A",
+                "Segmento_B3": "Nível 2"
+            },
+            "ALUP3.SA": {
+                "Empresa": "ALUPAR INVESTIMENTO S/A",
+                "Segmento_B3": "Nível 2"
+            },
+            "ALUP4.SA": {
+                "Empresa": "ALUPAR INVESTIMENTO S/A",
+                "Segmento_B3": "Nível 2"
+            },
+            "CBEE3.SA": {
+                "Empresa": "AMPLA ENERGIA E SERVICOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "AURE3.SA": {
+                "Empresa": "AUREN ENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "AXIA3.SA": {
+                "Empresa": "CENTRAIS ELET BRAS S.A. - ELETROBRAS",
+                "Segmento_B3": "Nível 1"
+            },
+            "CEBR3.SA": {
+                "Empresa": "CIA ENERGETICA DE BRASILIA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CEED3.SA": {
+                "Empresa": "CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CEED4.SA": {
+                "Empresa": "CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CLSC3.SA": {
+                "Empresa": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "CLSC4.SA": {
+                "Empresa": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "GPAR3.SA": {
+                "Empresa": "CIA CELG DE PARTICIPACOES - CELGPAR",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CMIG3.SA": {
+                "Empresa": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+                "Segmento_B3": "Nível 1"
+            },
+            "CMIG4.SA": {
+                "Empresa": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+                "Segmento_B3": "Nível 1"
+            },
+            "CEEB3.SA": {
+                "Empresa": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "COCE3.SA": {
+                "Empresa": "CIA ENERGETICA DO CEARA - COELCE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "COMR3.SA": {
+                "Empresa": "COMERC ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CPLE3.SA": {
+                "Empresa": "CIA PARANAENSE DE ENERGIA - COPEL",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CPFE3.SA": {
+                "Empresa": "CPFL ENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EKTR3.SA": {
+                "Empresa": "ELEKTRO REDES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EKTR4.SA": {
+                "Empresa": "ELEKTRO REDES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EMAE3.SA": {
+                "Empresa": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EMAE4.SA": {
+                "Empresa": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ENGI11.SA": {
+                "Empresa": "ENERGISA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "ENGI3.SA": {
+                "Empresa": "ENERGISA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "ENGI4.SA": {
+                "Empresa": "ENERGISA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "ENMT3.SA": {
+                "Empresa": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ENMT4.SA": {
+                "Empresa": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ENEV3.SA": {
+                "Empresa": "ENEVA S.A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EGIE3.SA": {
+                "Empresa": "ENGIE BRASIL ENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "EQPA3.SA": {
+                "Empresa": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "EQMA": {
+                "Empresa": "EQTLMARANHAO",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "EQTL3.SA": {
+                "Empresa": "EQUATORIAL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "GEPA3.SA": {
+                "Empresa": "RIO PARANAPANEMA ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "GEPA4.SA": {
+                "Empresa": "RIO PARANAPANEMA ENERGIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "ISAE3.SA": {
+                "Empresa": "ISA ENERGIA BRASIL S.A",
+                "Segmento_B3": "Nível 1"
+            },
+            "ISAE4.SA": {
+                "Empresa": "ISA ENERGIA BRASIL S.A",
+                "Segmento_B3": "Nível 1"
+            },
+            "LIGH": {
+                "Empresa": "LIGHT",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "LIGT11.SA": {
+                "Empresa": "LIGHT S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "LIGT3.SA": {
+                "Empresa": "LIGHT S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "NEOE3.SA": {
+                "Empresa": "NEOENERGIA S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PRMN": {
+                "Empresa": "PROMAN",
+                "Segmento_B3": "Básico Balcão"
+            },
+            "REDE3.SA": {
+                "Empresa": "REDE ENERGIA PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "RNEW3.SA": {
+                "Empresa": "RENOVA ENERGIA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "RNEW4.SA": {
+                "Empresa": "RENOVA ENERGIA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "RIOS3.SA": {
+                "Empresa": "RIO ALTO ENERGIAS RENOVÁVEIS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "TAEE11.SA": {
+                "Empresa": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "TAEE3.SA": {
+                "Empresa": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "TAEE4.SA": {
+                "Empresa": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+                "Segmento_B3": "Nível 2"
+            }
+        }
+    },
+    "Saneamento": {
+        "Água e Saneamento": {
+            "AMBP3.SA": {
+                "Empresa": "AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CASN3.SA": {
+                "Empresa": "CIA CATARINENSE DE AGUAS E SANEAM.-CASAN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CASN4.SA": {
+                "Empresa": "CIA CATARINENSE DE AGUAS E SANEAM.-CASAN",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "CSMG3.SA": {
+                "Empresa": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "IGSN3.SA": {
+                "Empresa": "IGUA SANEAMENTO S.A.",
+                "Segmento_B3": "Mais"
+            },
+            "ORVR11.SA": {
+                "Empresa": "ORIZON VALORIZACAO DE RESIDUOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "ORVR3.SA": {
+                "Empresa": "ORIZON VALORIZACAO DE RESIDUOS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SBSP3.SA": {
+                "Empresa": "CIA SANEAMENTO BASICO EST SAO PAULO",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "SAPR11.SA": {
+                "Empresa": "CIA SANEAMENTO DO PARANA - SANEPAR",
+                "Segmento_B3": "Nível 2"
+            },
+            "SAPR3.SA": {
+                "Empresa": "CIA SANEAMENTO DO PARANA - SANEPAR",
+                "Segmento_B3": "Nível 2"
+            },
+            "SAPR4.SA": {
+                "Empresa": "CIA SANEAMENTO DO PARANA - SANEPAR",
+                "Segmento_B3": "Nível 2"
+            }
+        }
+    },
+    "Bancos": {
+        "Bancos": {
+            "ABCB3.SA": {
+                "Empresa": "BCO ABC BRASIL S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "ABCB4.SA": {
+                "Empresa": "BCO ABC BRASIL S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "RPAD3.SA": {
+                "Empresa": "ALFA HOLDINGS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BAZA3.SA": {
+                "Empresa": "BCO AMAZONIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BMGB3.SA": {
+                "Empresa": "BANCO BMG S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BMGB4.SA": {
+                "Empresa": "BANCO BMG S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BGIP3.SA": {
+                "Empresa": "BCO ESTADO DE SERGIPE S.A. - BANESE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BGIP4.SA": {
+                "Empresa": "BCO ESTADO DE SERGIPE S.A. - BANESE",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BEES3.SA": {
+                "Empresa": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BEES4.SA": {
+                "Empresa": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BPAR3.SA": {
+                "Empresa": "BCO ESTADO DO PARA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BRSR3.SA": {
+                "Empresa": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BRBI11.SA": {
+                "Empresa": "BRBI BR PARTNERS S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "BRBI3.SA": {
+                "Empresa": "BRBI BR PARTNERS S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "BRBI4.SA": {
+                "Empresa": "BRBI BR PARTNERS S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "BBDC3.SA": {
+                "Empresa": "BCO BRADESCO S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BBDC4.SA": {
+                "Empresa": "BCO BRADESCO S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BBAS11.SA": {
+                "Empresa": "BCO BRASIL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BBAS3.SA": {
+                "Empresa": "BCO BRASIL S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "BSLI3.SA": {
+                "Empresa": "BRB BCO DE BRASILIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BSLI4.SA": {
+                "Empresa": "BRB BCO DE BRASILIA S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BPAC11.SA": {
+                "Empresa": "BCO BTG PACTUAL S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "BPAC3.SA": {
+                "Empresa": "BCO BTG PACTUAL S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "INBR": {
+                "Empresa": "INTER CO",
+                "Segmento_B3": "BDR2"
+            },
+            "ITUB3.SA": {
+                "Empresa": "ITAU UNIBANCO HOLDING S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "ITUB4.SA": {
+                "Empresa": "ITAU UNIBANCO HOLDING S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BMIN3.SA": {
+                "Empresa": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BMIN4.SA": {
+                "Empresa": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "BMEB3.SA": {
+                "Empresa": "BCO MERCANTIL DO BRASIL S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BMEB4.SA": {
+                "Empresa": "BCO MERCANTIL DO BRASIL S.A.",
+                "Segmento_B3": "Nível 1"
+            },
+            "BNBR3.SA": {
+                "Empresa": "BCO NORDESTE DO BRASIL S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "PINE11.SA": {
+                "Empresa": "BCO PINE S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "PINE3.SA": {
+                "Empresa": "BCO PINE S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "PINE4.SA": {
+                "Empresa": "BCO PINE S.A.",
+                "Segmento_B3": "Nível 2"
+            },
+            "SANB11.SA": {
+                "Empresa": "BCO SANTANDER (BRASIL) S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SANB3.SA": {
+                "Empresa": "BCO SANTANDER (BRASIL) S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            },
+            "SANB4.SA": {
+                "Empresa": "BCO SANTANDER (BRASIL) S.A.",
+                "Segmento_B3": "Básico Bolsa"
+            }
+        }
+    },
+    "Seguros": {
+        "Seguradoras": {
+            "BBSE3.SA": {
+                "Empresa": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "CXSE3.SA": {
+                "Empresa": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
+                "Segmento_B3": "Novo Mercado"
+            },
+            "PSSA3.SA": {
+                "Empresa": "PORTO SEGURO S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        },
+        "Resseguradoras": {
+            "IRBR3.SA": {
+                "Empresa": "IRB - BRASIL RESSEGUROS S.A.",
+                "Segmento_B3": "Novo Mercado"
+            }
+        }
+    }
+}
