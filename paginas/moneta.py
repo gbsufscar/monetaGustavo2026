@@ -11,7 +11,7 @@ from datetime import datetime
 
 def pagina_moneta(simbolos, paises, intervalos):
     st.title(body = "Modelo Moneta")
-    st.write("O moneta é uma ferramenta quantitativa para diviversificação de cartiera")
+    st.write("O moneta é uma ferramenta quantitativa para diversificação de carteira")
 
     # -----------------------------------------------------------------------------------
     # Divisão do layout da barra lateral (sidebar) em duas colunas
@@ -19,8 +19,8 @@ def pagina_moneta(simbolos, paises, intervalos):
 
     # Radio buttom para seleção do país
     pais = colunas[0].radio(label = "Selecione uma bolsa de ações",
-                                options = paises,
-                                index = 0)
+                                options = paises, # Lista de países disponível na variável países do arquivo utils/gerais.py
+                                index = 0) # Índice 0 para selecionar o primeiro país da lista por padrão (Brasil) e índice 1 para selecionar o segundo país da lista (Estados Unidos)
     
     print(pais)
     print(paises)
@@ -132,6 +132,10 @@ def pagina_moneta(simbolos, paises, intervalos):
 
     # Condição para rodar o modelo
     if botao_rodar_modelo == True:
+        if not acoes_selecionadas:
+            st.error("Selecione ao menos uma ação para rodar o modelo.")
+            return # Interrompe a execução do código se nenhuma ação for selecionada
+
         # => Implementação do modelo Moneta
         # Busca as cotações das ações selecionadas
         print("Buscando cotações!!!")
@@ -141,6 +145,10 @@ def pagina_moneta(simbolos, paises, intervalos):
                                     intervalo = intervalos[intervalo])
         #print(df_cotacoes)
 
+        if df_cotacoes.empty or df_cotacoes.shape[1] == 0:
+            st.error("Não foi possível obter cotações para as ações selecionadas. Tente outro período ou outro conjunto de tickers.")
+            return
+
         # Formatação das cotações
         print("Formatando cotações!!!")
         df_variacoes = formata_cotacoes(cotacoes = df_cotacoes,
@@ -148,6 +156,10 @@ def pagina_moneta(simbolos, paises, intervalos):
                                         maiores_medias = qtd_maiores_medias)
         
         #print(df_variacoes)
+
+        if df_variacoes.empty or df_variacoes.shape[1] == 0:
+            st.error("Após o tratamento, não restaram séries válidas para o modelo. Diminua o filtro de médias ou escolha mais tickers.")
+            return # Interrompe a execução do código se não restarem séries válidas
 
         # Roda o modelo Moneta para otimização da carteira
         print("Rodando o modelo Moneta!!!")

@@ -22,8 +22,8 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
     hoje_dtm: datetime = datetime.today()
 
 
-    cotacoes_anteriores = kwargs.get('cotacoes_anteriores', None)
-    cotacoes_segurar = kwargs.get('cotacoes_segurar', None)
+    cotacoes_anteriores = kwargs.get('cotacoes_anteriores', None) # Quantidade de cotações anteriores a serem buscadas para as variações das ações
+    cotacoes_segurar = kwargs.get('cotacoes_segurar', None) # Quantidade de cotações para segurar a carteira
 
     if cotacoes_anteriores is not None and cotacoes_segurar is not None:
         # data de início da busca (data de hoje menos a quantidade de cotações anteriores)
@@ -68,7 +68,8 @@ def formata_cotacoes(cotacoes: pd.DataFrame, intervalo: str, maiores_medias: int
     """
 
     # elimina as colunas (axis = 1: nome das ações) que possuem valores nulos para datas específicas dentro do intervalo de busca    
-    cotacoes.dropna(axis=1, inplace=True)
+    #cotacoes.dropna(axis=1, inplace=True)
+    cotacoes.dropna(axis=1, thresh=int(0.95 * len(cotacoes)), inplace=True) # Admite até 5% de valores nulos para eliminar uma coluna
 
     # filtra as variações periódicas das ações (a cada 5 dias ou todos os dias)
     cotacoes_intervaladas: pd.DataFrame = cotacoes.iloc[::5] if intervalo == "w" else cotacoes
