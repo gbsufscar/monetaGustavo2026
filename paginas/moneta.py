@@ -148,7 +148,7 @@ def pagina_moneta(simbolos, paises, intervalos):
     percentual_filtrar = st.sidebar.slider(
         label = "Selecione o percentual mínimo para uma ação aparecer na carteira",
         min_value = 0,
-        value = 1,
+        value = 1, # Por padrão, filtra ações com menos de 1% de peso na carteira
         max_value = 5, # Máximo de 5% de uma ação na carteira
     )
 

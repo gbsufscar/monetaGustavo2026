@@ -52,8 +52,8 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
         warnings.simplefilter("ignore")
         
         try:
-            print(f"🔍 Buscando cotações para {len(simbolos)} ticker(s): {simbolos[:5]}{'...' if len(simbolos) > 5 else ''}")
-            print(f"📅 Período: {data_inicio} até {data_fim}")
+            print(f"[SEARCH] Buscando cotacoes para {len(simbolos)} ticker(s): {simbolos[:5]}{'...' if len(simbolos) > 5 else ''}")
+            print(f"[DATE] Periodo: {data_inicio} ate {data_fim}")
             
             # busca as cotações das ações para o intervalo especificado
             # progress=False: não mostra barra de progresso
@@ -64,13 +64,13 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
                 progress=False
             )
             
-            print(f"📊 Tipo de dados retornado: {type(dados_download)}")
-            print(f"📊 Shape: {dados_download.shape if hasattr(dados_download, 'shape') else 'N/A'}")
-            print(f"📊 Colunas: {dados_download.columns.tolist() if hasattr(dados_download, 'columns') else 'N/A'}")
+            print(f"[DATA] Tipo de dados retornado: {type(dados_download)}")
+            print(f"[DATA] Shape: {dados_download.shape if hasattr(dados_download, 'shape') else 'N/A'}")
+            print(f"[DATA] Colunas: {dados_download.columns.tolist() if hasattr(dados_download, 'columns') else 'N/A'}")
             
             # Verifica se o download retornou dados
             if dados_download.empty:
-                print("⚠️ Yahoo Finance não retornou dados para os tickers solicitados")
+                print("[WARN] Yahoo Finance nao retornou dados para os tickers solicitados")
                 return pd.DataFrame()
             
             # Extrai a coluna 'Adj Close' ou 'Close' como fallback
@@ -84,15 +84,15 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
                     
                     # Se Adj Close está vazio, tenta usar Close
                     if cotacoes.empty and 'Close' in dados_download.columns.get_level_values(0):
-                        print("ℹ️ 'Adj Close' vazio, usando 'Close' como alternativa")
+                        print("[INFO] 'Adj Close' vazio, usando 'Close' como alternativa")
                         cotacoes = dados_download['Close']
                         cotacoes = cotacoes.dropna(axis=1, how='all')
                 elif 'Close' in dados_download.columns.get_level_values(0):
-                    print("ℹ️ 'Adj Close' não disponível, usando 'Close'")
+                    print("[INFO] 'Adj Close' nao disponivel, usando 'Close'")
                     cotacoes = dados_download['Close']
                     cotacoes = cotacoes.dropna(axis=1, how='all')
                 else:
-                    print("⚠️ Nenhuma coluna de preços encontrada")
+                    print("[WARN] Nenhuma coluna de precos encontrada")
                     return pd.DataFrame()
             elif 'Adj Close' in dados_download.columns:
                 # SingleIndex com 'Adj Close'
@@ -104,7 +104,7 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
                 # Assume que o DataFrame já contém apenas preços
                 cotacoes = dados_download
             
-            print(f"✅ Cotações extraídas - Shape: {cotacoes.shape}")
+            print(f"[OK] Cotacoes extraidas - Shape: {cotacoes.shape}")
             
             # Se apenas 1 ticker foi solicitado, yfinance retorna Series ao invés de DataFrame
             # Converte para DataFrame para manter consistência
@@ -113,7 +113,7 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
             
             # Se não restou nenhum dado válido, retorna DataFrame vazio
             if cotacoes.empty:
-                print("⚠️ Nenhum ticker retornou dados válidos do Yahoo Finance")
+                print("[WARN] Nenhum ticker retornou dados validos do Yahoo Finance")
                 return pd.DataFrame()
             
             # Informa quantos tickers foram obtidos com sucesso
@@ -121,13 +121,13 @@ def busca_cotacoes(simbolos: list, intervalo: str, **kwargs) -> pd.DataFrame:
             tickers_perdidos = len(simbolos) - tickers_validos
             
             if tickers_perdidos > 0:
-                print(f"ℹ️ {tickers_perdidos} ticker(s) não retornou(aram) dados (delisted/sem dados)")
-                print(f"✅ {tickers_validos} ticker(s) com dados válidos")
+                print(f"[INFO] {tickers_perdidos} ticker(s) nao retornou(aram) dados (delisted/sem dados)")
+                print(f"[OK] {tickers_validos} ticker(s) com dados validos")
             
             return cotacoes
             
         except Exception as e:
-            print(f"❌ Erro ao buscar cotações: {str(e)}")
+            print(f"[ERROR] Erro ao buscar cotacoes: {str(e)}")
             return pd.DataFrame()
 
 # -----------------------------------------------------------------------------------
@@ -148,18 +148,24 @@ def formata_cotacoes(cotacoes: pd.DataFrame, intervalo: str, maiores_medias: int
 
     # Verifica se o DataFrame está vazio
     if cotacoes.empty:
-        print("⚠️ DataFrame de cotações vazio")
+        print("[WARN] DataFrame de cotacoes vazio")
         return pd.DataFrame()
+    
+    print(f"[DATA] formata_cotacoes() - entrada: {cotacoes.shape[0]} datas, {cotacoes.shape[1]} acoes")
     
     # elimina as colunas (axis = 1: nome das ações) que possuem valores nulos para datas específicas dentro do intervalo de busca    
     #cotacoes.dropna(axis=1, inplace=True)
     # Admite até 5% de valores nulos para eliminar uma coluna
     threshold = max(1, int(0.95 * len(cotacoes)))  # Garante threshold mínimo de 1
+    colunas_antes = cotacoes.shape[1]
     cotacoes.dropna(axis=1, thresh=threshold, inplace=True)
+    colunas_depois = cotacoes.shape[1]
+    
+    print(f"[DATA] Apos dropna(thresh={threshold}): {colunas_antes} -> {colunas_depois} acoes (removidas: {colunas_antes - colunas_depois})")
     
     # Verifica se ainda restam colunas após filtrar NaN
     if cotacoes.empty or cotacoes.shape[1] == 0:
-        print("⚠️ Todos os tickers foram removidos por dados insuficientes (>5% NaN)")
+        print("[WARN] Todos os tickers foram removidos por dados insuficientes (>5% NaN)")
         return pd.DataFrame()
 
     # filtra as variações periódicas das ações (a cada 5 dias ou todos os dias)
@@ -167,7 +173,7 @@ def formata_cotacoes(cotacoes: pd.DataFrame, intervalo: str, maiores_medias: int
 
     # calcula as variações diárias das ações e elimina as linhas com valores nulos.
     # valores nulos podem ocorrer quando a ação não possui cotação em um determinado dia
-    variacoes_intervaladas: pd.DataFrame = cotacoes_intervaladas.pct_change().dropna()
+    variacoes_intervaladas: pd.DataFrame = cotacoes_intervaladas.pct_change(fill_method=None).dropna() # fill_method=None: não preenche os valores nulos antes de calcular a variação percentual, para evitar distorções nos cálculos de retorno e risco. O método dropna() é chamado em seguida para eliminar as linhas que contêm valores nulos resultantes do cálculo de pct_change().
 
     # se a quantidade de ações com maiores médias de retorno for maior que 0
     if maiores_medias > 0:
@@ -180,12 +186,19 @@ def formata_cotacoes(cotacoes: pd.DataFrame, intervalo: str, maiores_medias: int
         # o método 'nlargest' está presente em qualquer objeto do tipo 'Series'. Esse método retorna outro 'Series' com os 'n' maiores valores
         acoes_maiores_medias: pd.Series = medias.nlargest(maiores_medias)
 
+        print(f"[DATA] Apos nlargest({maiores_medias}): {len(acoes_maiores_medias)} acoes retornadas")
+        
+        if len(acoes_maiores_medias) == 0:
+            print(f"[WARN] nlargest({maiores_medias}) retornou 0 acoes - usando todas as {variacoes_intervaladas.shape[1]} disponíveis")
+            return variacoes_intervaladas
+
         # pega as ações com as maiores médias de retorno
         variacoes_intervaladas_filtradas: pd.DataFrame = \
             variacoes_intervaladas.loc[:, acoes_maiores_medias.index]
 
         return variacoes_intervaladas_filtradas
     
+    print(f"[DATA] Retornando {variacoes_intervaladas.shape[1]} acoes sem filtro de maiores_medias")
     return variacoes_intervaladas
 
 # -----------------------------------------------------------------------------------

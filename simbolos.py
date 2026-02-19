@@ -42,6 +42,7 @@ def obter_setores_por_classificacao(classificacao_besst):
     # Verifica se a classificação existe nos dados e retorna os setores
     if classificacao_besst in dados_tickers_br:
         return list(dados_tickers_br[classificacao_besst].keys())
+    # Se a classificação não existir, retorna lista vazia
     return []
 
 def obter_segmentos_b3_disponiveis(classificacao_besst=None):
@@ -52,19 +53,19 @@ def obter_segmentos_b3_disponiveis(classificacao_besst=None):
     # Utiliza um set para garantir unicidade dos segmentos
     segmentos = set()
     # Percorre os dados dos tickers para coletar os segmentos B3
-    if classificacao_besst and classificacao_besst in dados_tickers_br:
+    if classificacao_besst and classificacao_besst in dados_tickers_br: # Validação de guarda dupla para evitar KeyError
         # Percorre apenas a classificação especificada
-        for setor in dados_tickers_br[classificacao_besst].values():
-            for ticker_info in setor.values():
-                if 'Segmento_B3' in ticker_info:
-                    segmentos.add(ticker_info['Segmento_B3'])
+        for setor in dados_tickers_br[classificacao_besst].values(): # Percorre os setores da classificação
+            for ticker_info in setor.values(): # Percorre os tickers do setor
+                if 'Segmento_B3' in ticker_info: # Verifica se a chave 'Segmento_B3' existe no dicionário do ticker
+                    segmentos.add(ticker_info['Segmento_B3']) # Adiciona o segmento ao set, garantindo unicidade
     else:
         # Percorre todas as classificações
-        for classificacao in dados_tickers_br.values():
-            for setor in classificacao.values():
-                for ticker_info in setor.values():
-                    if 'Segmento_B3' in ticker_info:
-                        segmentos.add(ticker_info['Segmento_B3'])
+        for classificacao in dados_tickers_br.values(): # Percorre as classificações do BESST
+            for setor in classificacao.values(): # Percorre os setores da classificação
+                for ticker_info in setor.values(): # Percorre os tickers do setor
+                    if 'Segmento_B3' in ticker_info: # Verifica se a chave 'Segmento_B3' existe no dicionário do ticker
+                        segmentos.add(ticker_info['Segmento_B3']) # Adiciona o segmento ao set, garantindo unicidade
     # Retorna a lista de segmentos B3 ordenada
     return sorted(list(segmentos))
 
@@ -83,7 +84,7 @@ def obter_tickers_filtrados(classificacoes_besst=None, segmentos_b3=None):
     
     # Se classificacoes_besst não for fornecido, usa todas
     if classificacoes_besst is None:
-        classificacoes_besst = obter_classificacoes_besst()
+        classificacoes_besst = obter_classificacoes_besst() # Obtém todas as classificações BESST disponíveis
     
     # Garante que é uma lista
     if isinstance(classificacoes_besst, str):
@@ -92,30 +93,30 @@ def obter_tickers_filtrados(classificacoes_besst=None, segmentos_b3=None):
     # Percorre as classificações selecionadas
     for classificacao in classificacoes_besst:
         if classificacao not in dados_tickers_br:
-            continue
-            
+            continue # Pula classificações que não existem nos dados
+        # Percorre os setores e tickers da classificação selecionada
         for setor, tickers in dados_tickers_br[classificacao].items():
             for ticker, info in tickers.items():
                 # Aplica filtro de segmento B3 se fornecido
-                if segmentos_b3 is not None:
+                if segmentos_b3 is not None: # Se segmentos_b3 for fornecido, filtra os tickers que não pertencem aos segmentos selecionados
                     # Garante que é uma lista
                     if isinstance(segmentos_b3, str):
                         segmentos_b3 = [segmentos_b3] # Se for uma string, converte para lista
-                    
+                    # Verifica se o ticker possui a chave 'Segmento_B3' e se o valor está na lista de segmentos selecionados
                     if info.get('Segmento_B3') not in segmentos_b3:
                         continue
                 
                 # Adiciona o ticker com informações completas
                 tickers_filtrados[ticker] = {
-                    'Empresa': info.get('Empresa', 'N/A'),
-                    'Segmento_B3': info.get('Segmento_B3', 'N/A'),
-                    'Classificacao_BESST': classificacao,
-                    'Setor': setor
+                    'Empresa': info.get('Empresa', 'N/A'), # Nome da empresa, ou 'N/A' se não disponível
+                    'Segmento_B3': info.get('Segmento_B3', 'N/A'), # Segmento B3, ou 'N/A' se não disponível
+                    'Classificacao_BESST': classificacao, # Classificação BESST
+                    'Setor': setor # Setor da empresa
                 }
     # Retorna o dicionário de tickers filtrados
     return tickers_filtrados
 
 # Mantém compatibilidade com código legacy (se necessário)
 simbolos = {
-    "BR": list(obter_tickers_filtrados().keys())
+    "BR": list(obter_tickers_filtrados().keys()) # Lista de tickers filtrados para o Brasil (sem filtros adicionais)
 }

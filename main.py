@@ -10,8 +10,11 @@ paginas = {
     "Backtestes": pagina_backtestes
 }
 
-paises = {"Brasil": "BR", "Estados Unidos": "US"}
-intervalos = {"Diário": "d", "Semanal": "w"}
+# Dicionários para os filtros de países e intervalos de tempo
+paises = {"Brasil": "BR", 
+        "Estados Unidos": "US"}
+intervalos = {"Diário": "d", 
+            "Semanal": "w"}
 
 # Função principal que renderiza a página selecionada
 def main():
