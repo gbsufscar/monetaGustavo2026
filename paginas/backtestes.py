@@ -4,36 +4,37 @@ from modelo.backtestes import rodar_backtestes
 import pandas as pd
 import plotly.graph_objects as go
 from utils.performance_tracker import PerformanceTracker
+from paginas.moneta import selecionar_acoes
 
 def pagina_backtestes(simbolos, paises, intervalos):
-    st.title(body = "Modelo Backtestes")
-    st.write(body = "Realiza backtestes para o modelo Moneta")
+    st.title("Modelo Backtestes")
+    st.write("Realiza backtestes para o modelo Moneta")
 
     colunas = st.columns(2)
-    data_inicial = colunas[0].date_input(label = "Data Inicial", value = date(2019, 1, 1))
+    data_inicial = colunas[0].date_input(label = "Data Inicial", value = date(2023, 1, 1)) # Por padrão, a data inicial é 1º de janeiro de 2023
     data_final = colunas[1].date_input(label = "Data Final", min_value = data_inicial, value = datetime.now().date())
 
     st.divider()
 
     # ---------------------------------------------------
-    colunas = st.sidebar.columns(2)
-    pais = colunas[0].radio(label="Selecione uma bolsa de ações", options=paises, index=0)
-    intervalo = colunas[1].radio(label="Selecione o intervalo", options=intervalos, index=0)
-    st.sidebar.divider()
-    # ---------------------------------------------------
-
-    # ---------------------------------------------------
-    flag_acoes = st.sidebar.checkbox(label=f"Selecionar todas as ações do país ({pais})")
-    if flag_acoes:
-        bolsa_acoes = simbolos[paises[pais]][1:]
-    else:
-        bolsa_acoes = simbolos[paises[pais]][1:6]
+    # Configuração fixa para Brasil
+    pais = "Brasil"
     
-    acoes_selecionadas = st.sidebar.multiselect(label="Selecione as ações para rodar o modelo",
-                                                options=bolsa_acoes,
-                                                default=bolsa_acoes)
-
+    # Seleção do intervalo de tempo
+    intervalo = st.sidebar.radio(
+        label="Selecione o intervalo",
+        options=intervalos,
+        index=0
+    )
     st.sidebar.divider()
+    # ---------------------------------------------------
+
+    # ---------------------------------------------------
+    # Chamada da função de seleção de ações com filtros BESST e Segmento B3
+    acoes_selecionadas, tickers_dict, classificacoes_selecionadas, segmentos_selecionados = selecionar_acoes()
+    
+    st.sidebar.divider()
+    
     # ---------------------------------------------------
 
     # ---------------------------------------------------
@@ -80,7 +81,10 @@ def pagina_backtestes(simbolos, paises, intervalos):
     botao = st.sidebar.button(label="Rodar Backtestes")
 
     if botao == True:
-        simbolo_index = simbolos[paises[pais]][0]
+        # Define o Bovespa como índice de referência para o Brasil
+        simbolo_index = "^BVSP"
+        
+        # Chama a função de rodar os backtestes com os parâmetros selecionados pelo usuário
         resultados_backtestes = rodar_backtestes(acoes_selecionadas=acoes_selecionadas,
                                                 data_inicial_bt=data_inicial,
                                                 data_final_bt=data_final,
@@ -91,11 +95,41 @@ def pagina_backtestes(simbolos, paises, intervalos):
                                                 qtd_bebados=qtd_bebados,
                                                 simbolo_index=simbolo_index)
         
-        patrimonio_acumulado_moneta = resultados_backtestes["acumulados"]["moneta"]
+        # Valida a estrutura dos resultados antes de tentar acessar
+        if not isinstance(resultados_backtestes, dict) or "acumulados" not in resultados_backtestes:
+            st.error(" [Erro] Erro interno: Estrutura de resultado inválida. Contate o desenvolvedor.")
+            st.stop()
 
-        patrimonio_acumulado_index = resultados_backtestes["acumulados"]["index"]
+        diagnosticos = resultados_backtestes.get("diagnosticos")
+        if isinstance(diagnosticos, dict):
+            total = diagnosticos.get("total_tickers", 0)
+            validos = diagnosticos.get("tickers_validos", 0)
+            excluidos = diagnosticos.get("tickers_excluidos", 0)
+            st.warning(
+                f"⚠️ Tickers filtrados: {total} total | {validos} considerados | {excluidos} excluídos por falta de dados"
+            )
+        
+        if not isinstance(resultados_backtestes["acumulados"], dict):
+            st.error("[Erro] Não há dados suficientes para realizar o backtest.")
+            st.info("💡 Dicas para resolver:")
+            st.write("• Verifique se o índice selecionado tem dados disponíveis")
+            st.write("• Tente estender o período de datas")
+            st.write("• Reduza a quantidade de dias/semanas anteriores necessários")
+            st.write("• Selecione ações com histórico de dados maior")
+            st.stop()
+        
+        patrimonio_acumulado_moneta = resultados_backtestes["acumulados"].get("moneta", pd.Series())
+        patrimonio_acumulado_index = resultados_backtestes["acumulados"].get("index", pd.Series())
+        patrimonio_acumulado_bebados = resultados_backtestes["acumulados"].get("bebados", [])
 
-        patrimonio_acumulado_bebados = resultados_backtestes["acumulados"]["bebados"]
+        # Valida se os resultados estão vazios
+        if patrimonio_acumulado_moneta.empty or patrimonio_acumulado_index.empty:
+            st.error("[Erro] Nenhum resultado foi gerado para os parâmetros selecionados.")
+            st.info("💡 Razões possíveis:")
+            st.write("• Período de dados insuficiente")
+            st.write("• Ações selecionadas sem dados suficientes")
+            st.write("• Parâmetros de backtest muito restritivos")
+            st.stop()
 
         # Exibir resultados no prompt de comando (console)
         print(patrimonio_acumulado_moneta)
@@ -192,8 +226,13 @@ def pagina_backtestes(simbolos, paises, intervalos):
         st.divider()
 
         # Dados gerais das carteiras geradas no backtest (data, ações, pesos, etc.)
-        dados_gerais = resultados_backtestes["dados"] 
+        dados_gerais = resultados_backtestes["dados"]
         qtd_carteiras = len(dados_gerais)
+
+        if qtd_carteiras == 0:
+            st.warning("Nenhuma carteira foi gerada no período selecionado.")
+            st.info("💡 Tente ampliar o período, reduzir filtros ou escolher outros tickers.")
+            st.stop()
 
         # Exibir as carteiras geradas no backtest
         qtd_venceu_index = 0
@@ -277,11 +316,11 @@ def pagina_backtestes(simbolos, paises, intervalos):
         # Cria 2 colunas para exibir os índices de comparação quantitativas gerados no backtest
         col1, col2 = st.columns(2)
         col1.metric(label="Quantidade de carteiras com retornos positivos",
-                    value=f"{qtd_positivo}/{qtd_carteiras}",
-                    delta=f"{qtd_positivo/qtd_carteiras:.2%}")
-        col2.metric(label="Quantidade de carteiras que venceram o {simbolo_index}",
-                    value=f"{qtd_venceu_index}/{qtd_carteiras}",
-                    delta=f"{qtd_venceu_index/qtd_carteiras:.2%}")
+                value=f"{qtd_positivo}/{qtd_carteiras}",
+                delta=f"{qtd_positivo/qtd_carteiras:.2%}")
+        col2.metric(label=f"Quantidade de carteiras que venceram o {simbolo_index}",
+                value=f"{qtd_venceu_index}/{qtd_carteiras}",
+                delta=f"{qtd_venceu_index/qtd_carteiras:.2%}")
 
 
 

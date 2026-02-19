@@ -17,6 +17,8 @@ class PerformanceTracker:
     def annualized_return(self, data_returns=False):
         if isinstance(data_returns, bool):
             data_returns = self.data_returns
+        if data_returns is None or len(data_returns) == 0:
+            return np.nan
         cumulative_return = (1 + data_returns).prod()
         if self.period == "d":
             years = len(data_returns) / 252
@@ -24,12 +26,16 @@ class PerformanceTracker:
             years = len(data_returns) / 52
         else:
             raise Exception("Period must be either daily or weekly.")
+        if years == 0:
+            return np.nan
         annual_return = (cumulative_return ** (1 / years)) - 1
         return 100 * annual_return
 
     def annualized_std_return(self, data_returns=False):
         if isinstance(data_returns, bool):
             data_returns = self.data_returns
+        if data_returns is None or len(data_returns) == 0:
+            return np.nan
         std_dev = data_returns.std()
         if self.period == "d":
             annual_std_dev = std_dev * np.sqrt(252)
@@ -54,25 +60,43 @@ class PerformanceTracker:
         return annual_var
 
     def sharpe_ratio(self):
-        sharpe_ratio = (self.annualized_return() - self.annual_risk_free) / self.annualized_std_return()
+        annual_std = self.annualized_std_return()
+        annual_ret = self.annualized_return()
+        if annual_std in [0, np.nan] or np.isnan(annual_std) or np.isnan(annual_ret):
+            return np.nan
+        sharpe_ratio = (annual_ret - self.annual_risk_free) / annual_std
         return sharpe_ratio
 
     def modigliani_ratio(self):
-        stdev = self.annualized_std_return(data_returns=self.market_returns) / self.annualized_return()
+        annual_ret = self.annualized_return()
+        annual_std_market = self.annualized_std_return(data_returns=self.market_returns)
+        if annual_ret in [0, np.nan] or np.isnan(annual_ret) or np.isnan(annual_std_market):
+            return np.nan
+        stdev = annual_std_market / annual_ret
         asset_pr = self.annualized_return() - self.annual_risk_free
         market_pr = self.annualized_return(data_returns=self.market_returns) - self.annual_risk_free
         modigliani_ratio = stdev * asset_pr - market_pr
         return modigliani_ratio
 
     def modified_sharpe_ratio(self):
-        modified_sharpe_ratio = (self.annualized_return() - self.annual_risk_free) / self.annualized_variance_return()
+        annual_var = self.annualized_variance_return()
+        annual_ret = self.annualized_return()
+        if annual_var in [0, np.nan] or np.isnan(annual_var) or np.isnan(annual_ret):
+            return np.nan
+        modified_sharpe_ratio = (annual_ret - self.annual_risk_free) / annual_var
         return modified_sharpe_ratio
 
     def treynor_ratio(self):
-        treynor_ratio = (self.annualized_return() - self.annual_risk_free) / self.portfolio_beta()
+        beta = self.portfolio_beta()
+        annual_ret = self.annualized_return()
+        if beta in [0, None] or np.isnan(annual_ret) or (isinstance(beta, float) and np.isnan(beta)):
+            return np.nan
+        treynor_ratio = (annual_ret - self.annual_risk_free) / beta
         return treynor_ratio
 
     def max_drawdown(self):
+        if self.data_returns is None or len(self.data_returns) == 0:
+            return np.nan
         cumulative_return = np.cumprod(1 + self.data_returns)
         rolling_max = np.maximum.accumulate(cumulative_return)
         drawdown = (cumulative_return - rolling_max) / rolling_max
@@ -81,17 +105,34 @@ class PerformanceTracker:
 
     def portfolio_beta(self):
         if isinstance(self.market_returns, pd.Series):
-            covariance = np.cov(self.data_returns, self.market_returns, ddof=0)[0, 1]
-            market_variance = np.var(self.market_returns, ddof=0)
+            # Alinha séries pelo índice para evitar tamanhos diferentes
+            if isinstance(self.data_returns, pd.Series):
+                aligned = pd.concat([self.data_returns, self.market_returns], axis=1, join="inner").dropna()
+                if aligned.empty or aligned.shape[0] < 2:
+                    return np.nan
+                data_ret = aligned.iloc[:, 0]
+                market_ret = aligned.iloc[:, 1]
+            else:
+                data_ret = self.data_returns
+                market_ret = self.market_returns
+
+            covariance = np.cov(data_ret, market_ret, ddof=0)[0, 1]
+            market_variance = np.var(market_ret, ddof=0)
+            if market_variance == 0:
+                return np.nan
             beta = covariance / market_variance
             return beta
         else:
             return None
 
     def portfolio_value_at_risk(self):
+        if self.data_returns is None or len(self.data_returns) == 0:
+            return np.nan
         return 100 * scipy.stats.norm.ppf(self.alpha_var, np.mean(self.data_returns), np.std(self.data_returns))
 
     def portfolio_media_perda_esperada(self):
+        if self.data_returns is None or len(self.data_returns) == 0:
+            return np.nan
         return 100 * self.data_returns[self.data_returns < self.portfolio_value_at_risk() / 100].mean()
 
     def plot_cumulative_returns(self):

@@ -11,6 +11,116 @@ from simbolos import (obter_classificacoes_besst, obter_segmentos_b3_disponiveis
 
 # -----------------------------------------------------------------------------------
 
+def selecionar_acoes() -> tuple:
+    """
+    Função para seleção de ações com aplicação de 3 filtros sequenciais.
+    
+    Filtros implementados:
+    1. Classificação BESST (Método Jeito Barsi de Investir)
+    2. Segmento B3 (Segmento de listagem da bolsa)
+    3. Seleção de Tickers individuais
+    
+    Returns:
+        tuple: (acoes_selecionadas, tickers_dict, classificacoes_selecionadas, segmentos_selecionados)
+               - acoes_selecionadas (list): Símbolos dos tickers selecionados (ex: ['PETR4.SA', 'VALE3.SA'])
+               - tickers_dict (dict): Dicionário com informações dos tickers (empresa, BESST, segmento, etc)
+               - classificacoes_selecionadas (list): Classificações BESST filtradas
+               - segmentos_selecionados (list): Segmentos B3 filtrados
+    """
+    
+    st.sidebar.subheader("🎯 Filtros de Seleção")
+    
+    # -----------------------------------------------------------------------------------
+    # FILTRO 1: Classificação BESST
+    classificacoes_disponiveis = obter_classificacoes_besst()
+    classificacoes_selecionadas = st.sidebar.multiselect(
+        label="1️⃣ Classificação BESST",
+        options=classificacoes_disponiveis,
+        default=classificacoes_disponiveis,
+        help="Filtro por classificação da metodologia Jeito Barsi de Investir (JBI)"
+    )
+    
+    # -----------------------------------------------------------------------------------
+    # FILTRO 2: Segmento B3
+    if classificacoes_selecionadas:
+        segmentos_disponiveis = obter_segmentos_b3_disponiveis(classificacao_besst=None)
+        segmentos_selecionados = st.sidebar.multiselect(
+            label="2️⃣ Segmento B3",
+            options=segmentos_disponiveis,
+            default=segmentos_disponiveis,
+            help="Filtro por segmento de listagem da B3"
+        )
+        
+        if segmentos_selecionados:
+            st.sidebar.caption(f"💼 {len(segmentos_selecionados)} segmento(s) selecionado(s)")
+    else:
+        segmentos_selecionados = []
+        st.sidebar.warning("⚠️ Selecione ao menos uma Classificação BESST")
+    
+    st.sidebar.divider()
+    
+    # -----------------------------------------------------------------------------------
+    # FILTRO 3: Seleção de Tickers
+    acoes_selecionadas = []
+    tickers_dict = {}
+    
+    if classificacoes_selecionadas and segmentos_selecionados:
+        tickers_dict = obter_tickers_filtrados(
+            classificacoes_besst=classificacoes_selecionadas,
+            segmentos_b3=segmentos_selecionados
+        )
+        
+        st.sidebar.caption(f"📊 {len(tickers_dict)} ticker(s) disponível(is) após filtros")
+        
+        # Cria lista formatada para exibição: "TICKER - Nome da Empresa"
+        tickers_formatados = {}
+        for ticker, info in tickers_dict.items():
+            label = f"{ticker} - {info['Empresa']}"
+            tickers_formatados[label] = ticker
+        
+        # Checkbox para selecionar todos os tickers
+        flag_todos_tickers = st.sidebar.checkbox(
+            label=f"Selecionar todos os {len(tickers_formatados)} tickers filtrados",
+            value=False
+        )
+        
+        # Define tickers padrão
+        if flag_todos_tickers:
+            tickers_default = list(tickers_formatados.keys())
+        else:
+            tickers_default = list(tickers_formatados.keys())[:min(10, len(tickers_formatados))]
+        
+        # Seleção dos tickers
+        tickers_selecionados_formatados = st.sidebar.multiselect(
+            label="3️⃣ Selecione os Tickers",
+            options=list(tickers_formatados.keys()),
+            default=tickers_default,
+            help="Selecione os tickers que deseja incluir no modelo"
+        )
+        
+        acoes_selecionadas = [tickers_formatados[item] for item in tickers_selecionados_formatados]
+        
+        st.sidebar.success(f"✅ {len(acoes_selecionadas)} ticker(s) selecionado(s)")
+        
+        # Expander com detalhes dos tickers selecionados
+        if acoes_selecionadas:
+            with st.sidebar.expander("📋 Ver Detalhes dos Tickers Selecionados"):
+                for ticker in acoes_selecionadas:
+                    info = tickers_dict[ticker]
+                    st.text(f"• {ticker}")
+                    st.caption(f"  {info['Empresa']}")
+                    st.caption(f"  BESST: {info['Classificacao_BESST']}")
+                    st.caption(f"  Segmento: {info['Segmento_B3']}")
+                    st.caption(f"  Setor: {info['Setor']}")
+                    st.divider()
+    else:
+        if not segmentos_selecionados and classificacoes_selecionadas:
+            st.sidebar.warning("⚠️ Selecione ao menos um Segmento B3")
+    
+    return acoes_selecionadas, tickers_dict, classificacoes_selecionadas, segmentos_selecionados
+
+# -----------------------------------------------------------------------------------
+
 def pagina_moneta(simbolos, paises, intervalos):
     st.title(body = "Modelo Moneta")
     st.write("O moneta é uma ferramenta quantitativa para diversificação de carteira")
@@ -32,99 +142,8 @@ def pagina_moneta(simbolos, paises, intervalos):
     st.sidebar.divider()
 
     # -----------------------------------------------------------------------------------
-    # FILTRO 1: Classificação BESST
-    st.sidebar.subheader("🎯 Filtros de Seleção")
-    
-    classificacoes_disponiveis = obter_classificacoes_besst()
-    classificacoes_selecionadas = st.sidebar.multiselect(
-        label = "1️⃣ Classificação BESST",
-        options = classificacoes_disponiveis,
-        default = classificacoes_disponiveis,
-        help = "Filtro por classificação da metodologia Jeito Barsi de Investir (JBI)"
-    )
-    
-    # -----------------------------------------------------------------------------------
-    # FILTRO 2: Segmento B3
-    if classificacoes_selecionadas:
-        segmentos_disponiveis = obter_segmentos_b3_disponiveis(classificacao_besst=None)
-        segmentos_selecionados = st.sidebar.multiselect(
-            label = "2️⃣ Segmento B3",
-            options = segmentos_disponiveis,
-            default = segmentos_disponiveis,
-            help = "Filtro por segmento de listagem da B3"
-        )
-        
-        # Mostra quantidade de segmentos selecionados
-        if segmentos_selecionados:
-            st.sidebar.caption(f"💼 {len(segmentos_selecionados)} segmento(s) selecionado(s)")
-    else:
-        segmentos_selecionados = []
-        st.sidebar.warning("⚠️ Selecione ao menos uma Classificação BESST")
-    
-    # Linha divisória no sidebar
-    st.sidebar.divider()
-    
-    # -----------------------------------------------------------------------------------
-    # FILTRO 3: Seleção de Tickers
-    if classificacoes_selecionadas and segmentos_selecionados:
-        # Obtém os tickers filtrados
-        tickers_dict = obter_tickers_filtrados(
-            classificacoes_besst=classificacoes_selecionadas,
-            segmentos_b3=segmentos_selecionados
-        )
-        
-        # Mostra estatísticas dos tickers disponíveis
-        st.sidebar.caption(f"📊 {len(tickers_dict)} ticker(s) disponível(is) após filtros")
-        
-        # Cria lista formatada para exibição: "TICKER - Nome da Empresa"
-        tickers_formatados = {}
-        for ticker, info in tickers_dict.items():
-            label = f"{ticker} - {info['Empresa']}"
-            tickers_formatados[label] = ticker
-        
-        # Checkbox para selecionar todos os tickers
-        flag_todos_tickers = st.sidebar.checkbox(
-            label = f"Selecionar todos os {len(tickers_formatados)} tickers filtrados",
-            value = False
-        )
-        
-        # Define tickers padrão
-        if flag_todos_tickers:
-            tickers_default = list(tickers_formatados.keys())
-        else:
-            # Seleciona os 10 primeiros como padrão
-            tickers_default = list(tickers_formatados.keys())[:min(10, len(tickers_formatados))]
-        
-        # Seleção dos tickers
-        tickers_selecionados_formatados = st.sidebar.multiselect(
-            label = "3️⃣ Selecione os Tickers",
-            options = list(tickers_formatados.keys()),
-            default = tickers_default,
-            help = "Selecione os tickers que deseja incluir no modelo"
-        )
-        
-        # Converte de volta para lista de tickers (sem o nome da empresa)
-        acoes_selecionadas = [tickers_formatados[item] for item in tickers_selecionados_formatados]
-        
-        # Mostra contador de tickers selecionados
-        st.sidebar.success(f"✅ {len(acoes_selecionadas)} ticker(s) selecionado(s)")
-        
-        # Expander com detalhes dos tickers selecionados
-        if acoes_selecionadas:
-            with st.sidebar.expander("📋 Ver Detalhes dos Tickers Selecionados"):
-                for ticker in acoes_selecionadas:
-                    info = tickers_dict[ticker]
-                    st.text(f"• {ticker}")
-                    st.caption(f"  {info['Empresa']}")
-                    st.caption(f"  BESST: {info['Classificacao_BESST']}")
-                    st.caption(f"  Segmento: {info['Segmento_B3']}")
-                    st.caption(f"  Setor: {info['Setor']}")
-                    st.divider()
-        
-    else:
-        acoes_selecionadas = []
-        if not segmentos_selecionados and classificacoes_selecionadas:
-            st.sidebar.warning("⚠️ Selecione ao menos um Segmento B3")
+    # Chamada da função de seleção de ações
+    acoes_selecionadas, tickers_dict, classificacoes_selecionadas, segmentos_selecionados = selecionar_acoes()
     
     # Linha divisória no sidebar (quebra de layout)
     st.sidebar.divider()
@@ -287,6 +306,13 @@ def pagina_moneta(simbolos, paises, intervalos):
         if df_cotacoes.empty or df_cotacoes.shape[1] == 0:
             st.error("Não foi possível obter cotações para as ações selecionadas. Tente outro período ou outro conjunto de tickers.")
             return
+
+        total_tickers = len(acoes_selecionadas)
+        validos = df_cotacoes.shape[1]
+        excluidos = max(0, total_tickers - validos)
+        st.warning(
+            f"⚠️ Tickers filtrados: {total_tickers} total | {validos} considerados | {excluidos} excluídos por falta de dados"
+        )
 
         # Formatação das cotações
         print("Formatando cotações!!!")

@@ -75,11 +75,19 @@ def gera_df_carteira(carteira_final: pd.Series, cotacoes: pd.DataFrame, pais: st
     # cria a coluna 'Qtd de Acoes' para cada ação no DataFrame da carteira
     df_carteira.loc[:, 'Qtd de Acoes'] = qtd_acoes_ajustado.values
 
+    # remove ações cuja quantidade ficou zero após arredondamento
+    df_carteira = df_carteira[df_carteira['Qtd de Acoes'] > 0]
+
+    # se após remover zeros não restar nenhuma ação, retorna None
+    if df_carteira.empty:
+        return None
+
     # cria a coluna 'Investido (R$ ou US$)' para cada ação no DataFrame da carteira
-    df_carteira.loc[:, f"Investido ({'R$' if pais == 'BR' else 'US$'})"] = (ultimos_precos * df_carteira.loc[:, 'Qtd de Acoes']).round(2)
+    precos_filtrados = ultimos_precos.loc[df_carteira.index]
+    df_carteira.loc[:, f"Investido ({'R$' if pais == 'BR' else 'US$'})"] = (precos_filtrados * df_carteira.loc[:, 'Qtd de Acoes']).round(2)
 
     # insere a coluna 'Precos (R$ ou US$)' pada cada ação no DataFrame da carteira
-    df_carteira.insert(1, f"Precos ({'R$' if pais == 'BR' else 'US$'})", ultimos_precos.round(2))
+    df_carteira.insert(1, f"Precos ({'R$' if pais == 'BR' else 'US$'})", precos_filtrados.round(2))
 
     return df_carteira
 

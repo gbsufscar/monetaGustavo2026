@@ -107,19 +107,21 @@ def moneta_backtestes(data_inicial_bt, data_final_bt,
     # Verifica se temos dados disponíveis
     if cotacoes.empty or len(cotacoes) == 0:
         print(f"[ERROR] Nenhum dado disponível para cotações. Retornando vazio.")
+        empty_series = pd.Series(dtype=float)
         return {
-            "acumulados": pd.Series(dtype=float),
-            "acumulados_index": pd.Series(dtype=float),
-            "acumulados_bebados": pd.Series(dtype=float)
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": []
         }
     
     # Verifica se dados do índice estão disponíveis
     if cotacoes_index.empty or len(cotacoes_index) == 0:
         print(f"[ERROR] Nenhum dado disponível para cotacoes_index. Retornando vazio.")
+        empty_series = pd.Series(dtype=float)
         return {
-            "acumulados": pd.Series(dtype=float),
-            "acumulados_index": pd.Series(dtype=float),
-            "acumulados_bebados": pd.Series(dtype=float)
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": []
         }
     
     # Garante que usamos datas que existem nos dados
@@ -127,13 +129,13 @@ def moneta_backtestes(data_inicial_bt, data_final_bt,
     data_maxima_dados = cotacoes.index.max()
     
     # Verifica se as datas são válidas (não NaT)
-    import pandas as pd
     if pd.isna(data_minima_dados) or pd.isna(data_maxima_dados):
         print(f"[ERROR] Datas inválidas (NaT) nos dados. Retornando vazio.")
+        empty_series = pd.Series(dtype=float)
         return {
-            "acumulados": pd.Series(dtype=float),
-            "acumulados_index": pd.Series(dtype=float),
-            "acumulados_bebados": pd.Series(dtype=float)
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": []
         }
     
     print(f"[DATA] Intervalo de dados disponível: {data_minima_dados} a {data_maxima_dados}")
@@ -454,6 +456,14 @@ def rodar_backtestes(acoes_selecionadas,
     # Avança a data final considerando o período de rebalanceamento (cotacoes_segurar)
     data_maxima = gerar_data(data_final_bt, cotacoes_segurar, intervalo, "posterior")
 
+    # Diagnóstico de tickers
+    diagnosticos = {
+        "total_tickers": len(acoes_selecionadas),
+        "tickers_baixados": 0,
+        "tickers_validos": 0,
+        "tickers_excluidos": len(acoes_selecionadas)
+    }
+
     # Busca os dados históricos de cotações das ações selecionadas no período ampliado
     # Formata as datas para o padrão YYYY-MM-DD exigido pela função busca_cotacoes
     cotacoes = busca_cotacoes(simbolos=acoes_selecionadas,
@@ -461,9 +471,21 @@ def rodar_backtestes(acoes_selecionadas,
                             data_inicio=data_minima.strftime("%Y-%m-%d"),
                             data_fim=data_maxima.strftime("%Y-%m-%d"))
     
-    # Remove colunas (ações) que possuem dados faltantes (NaN) em todo o período
-    # axis=1 opera sobre colunas, inplace=True modifica o DataFrame original
-    cotacoes.dropna(axis=1, inplace=True)
+    # Log de debug antes de limpar dados
+    print(f"[DEBUG] cotacoes antes de dropna: shape={cotacoes.shape}, empty={cotacoes.empty}")
+    
+    # Remove colunas (ações) totalmente vazias (todos os valores NaN)
+    # Evita eliminar séries com poucos NaNs; o filtro fino ocorre em formata_cotacoes
+    if not cotacoes.empty:
+        colunas_antes = cotacoes.shape[1]
+        cotacoes = cotacoes.dropna(axis=1, how='all')
+        colunas_depois = cotacoes.shape[1]
+        diagnosticos["tickers_baixados"] = colunas_antes
+        diagnosticos["tickers_validos"] = colunas_depois
+        diagnosticos["tickers_excluidos"] = max(0, diagnosticos["total_tickers"] - colunas_depois)
+        print(f"[DEBUG] cotacoes após remover colunas vazias: shape={cotacoes.shape}, colunas removidas={colunas_antes - colunas_depois}")
+    else:
+        print(f"[WARN] cotacoes vazio após busca_cotacoes!")
 
     # Busca os dados históricos de cotações do índice de referência no mesmo período ampliado
     # Usa lista com um elemento porque busca_cotacoes espera uma lista de símbolos
@@ -472,13 +494,65 @@ def rodar_backtestes(acoes_selecionadas,
                                     data_inicio=data_minima.strftime("%Y-%m-%d"),
                                     data_fim=data_maxima.strftime("%Y-%m-%d"))
     
-    # Remove linhas (datas) que possuem dados faltantes (NaN) no índice
-    # axis=0 opera sobre linhas/índices, inplace=True modifica o DataFrame original
-    cotacoes_index.dropna(axis=0, inplace=True)
+    # Remove linhas (datas) que possuem dados faltantes (NaN) no índice com método mais seguro
+    if not cotacoes_index.empty:
+        print(f"[DEBUG] cotacoes_index antes de dropna: shape={cotacoes_index.shape}")
+        # Remove linhas com NaN
+        cotacoes_index_original_len = len(cotacoes_index)
+        cotacoes_index = cotacoes_index.dropna(axis=0)
+        print(f"[DEBUG] cotacoes_index após dropna: shape={cotacoes_index.shape}, linhas removidas={cotacoes_index_original_len - len(cotacoes_index)}")
+    else:
+        print(f"[WARN] cotacoes_index vazio após busca_cotacoes para {simbolo_index}")
+
+    # VALIDAÇÃO CRÍTICA: Verifica se cotações ficou vazia
+    if cotacoes.empty or len(cotacoes) == 0 or cotacoes.shape[1] == 0:
+        print(f"[ERROR] cotacoes ficou vazia após limpeza! Shape: {cotacoes.shape}")
+        empty_series = pd.Series(dtype=float)
+        return {
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": [],
+            "diagnosticos": diagnosticos
+        }
+
+    # Validação: verifica se há dados do índice
+    if cotacoes_index.empty or len(cotacoes_index) == 0:
+        print(f"[WARN] Nenhum dado disponível para o índice: {simbolo_index}")
+        print(f"[INFO] Tentando usar apenas as ações selecionadas para o backtest...")
+        # Se o índice estiver vazio, cria um índice fictício com as mesmas datas das ações
+        if not cotacoes.empty:
+            cotacoes_index = pd.DataFrame(
+                [100.0] * len(cotacoes),  # Começa com 100
+                index=cotacoes.index,
+                columns=[simbolo_index]
+            )
+            print(f"[OK] Índice fictício criado com {len(cotacoes_index)} datas")
+        else:
+            print(f"[ERROR] Nenhum dado disponível para ações ou índice!")
+            empty_series = pd.Series(dtype=float)
+            return {
+                "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+                "variacoes": {"moneta": empty_series, "index": empty_series},
+                "dados": [],
+                "diagnosticos": diagnosticos
+            }
 
     # Encontra as datas comuns entre as duas bases de dados (ações e índice)
     # Usa intersecção de índices para garantir que ambas têm dados para as mesmas datas
     datas_comuns = cotacoes.index.intersection(cotacoes_index.index)
+    
+    # Validação: verifica se há datas em comum
+    if len(datas_comuns) == 0:
+        print(f"[ERROR] Nenhuma data em comum entre as ações e o índice!")
+        print(f"[INFO] Datas das ações: {len(cotacoes)} registros")
+        print(f"[INFO] Datas do índice: {len(cotacoes_index)} registros")
+        empty_series = pd.Series(dtype=float)
+        return {
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": [],
+            "diagnosticos": diagnosticos
+        }
     
     # Filtra as cotações das ações para manter apenas as datas comuns
     # Garante alinhamento temporal entre ações e índice para os cálculos posteriores
@@ -487,6 +561,20 @@ def rodar_backtestes(acoes_selecionadas,
     # Filtra as cotações do índice para manter apenas as datas comuns
     # Assegura que ações e índice têm o mesmo período de dados sincronizados
     cotacoes_index = cotacoes_index.loc[datas_comuns]
+    
+    # Garante que cotacoes é um DataFrame (não uma Series)
+    # Se .loc retornar uma Series (quando tem apenas uma coluna), converte para DataFrame
+    if isinstance(cotacoes, pd.Series):
+        cotacoes = cotacoes.to_frame()
+    
+    # Garante que cotacoes_index é um DataFrame (não uma Series)
+    # Se .loc retornar una Series (quando tem apenas uma coluna), converte para DataFrame
+    if isinstance(cotacoes_index, pd.Series):
+        cotacoes_index = cotacoes_index.to_frame()
+    
+    print(f"[OK] Dados preparados para backtest:")
+    print(f"[INFO] - Ações: {cotacoes.shape[0]} datas x {cotacoes.shape[1]} tickers")
+    print(f"[INFO] - Índice: {cotacoes_index.shape[0]} datas x {cotacoes_index.shape[1]} coluna(s)")
 
     # Executa o backtest principal passando todos os dados preparados
     # Retorna os resultados acumulados para Moneta, índice e carteiras aleatórias
@@ -494,5 +582,17 @@ def rodar_backtestes(acoes_selecionadas,
                                             intervalo, cotacoes_anteriores, cotacoes_segurar, maiores_medias,
                                             qtd_bebados, cotacoes, cotacoes_index)
 
+    # Validação de segurança: verifica se a estrutura de retorno é válida
+    if not isinstance(resultados_backtestes, dict):
+        print(f"[ERROR] rodar_backtestes() retornou tipo inválido: {type(resultados_backtestes)}")
+        empty_series = pd.Series(dtype=float)
+        return {
+            "acumulados": {"moneta": empty_series, "index": empty_series, "bebados": []},
+            "variacoes": {"moneta": empty_series, "index": empty_series},
+            "dados": [],
+            "diagnosticos": diagnosticos
+        }
+    
     # Retorna o dicionário com todos os resultados dos backtestes para análise posterior
+    resultados_backtestes["diagnosticos"] = diagnosticos
     return resultados_backtestes

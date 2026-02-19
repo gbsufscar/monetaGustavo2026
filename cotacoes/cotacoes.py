@@ -155,8 +155,8 @@ def formata_cotacoes(cotacoes: pd.DataFrame, intervalo: str, maiores_medias: int
     
     # elimina as colunas (axis = 1: nome das ações) que possuem valores nulos para datas específicas dentro do intervalo de busca    
     #cotacoes.dropna(axis=1, inplace=True)
-    # Admite até 5% de valores nulos para eliminar uma coluna
-    threshold = max(1, int(0.95 * len(cotacoes)))  # Garante threshold mínimo de 1
+    # Admite até 10% de valores nulos para eliminar uma coluna
+    threshold = max(1, int(0.90 * len(cotacoes)))  # Garante threshold mínimo de 1
     colunas_antes = cotacoes.shape[1]
     cotacoes.dropna(axis=1, thresh=threshold, inplace=True)
     colunas_depois = cotacoes.shape[1]
