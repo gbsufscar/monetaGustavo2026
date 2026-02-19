@@ -8,8 +8,8 @@ import pandas as pd
 from cotacoes.cotacoes import busca_cotacoes
 
 pais = "BR"
-index_id = simbolos[pais][0]
-acoes_ids = simbolos[pais][1:]
+index_id = simbolos[pais][0] # Índice de referência para o país selecionado (BOVA11.SA para o Brasil e ^GSPC para os Estados Unidos)
+acoes_ids = simbolos[pais][1:] # Lista de ações para o país selecionado (excluindo o índice de referência que é o primeiro elemento da lista)
 
 # configuração dos campeonatos que cada parametrização de Moneta vai jogar
 colecao_comecos = [date(2018, 3, 15), date(2019, 3, 15), date(2020, 3, 15)]

@@ -6,52 +6,125 @@ from modelo.moneta import moneta_ag
 from utils.gerais import gera_df_carteira, obter_data_vender
 import plotly.graph_objects as go
 from datetime import datetime
+from simbolos import (obter_classificacoes_besst, obter_segmentos_b3_disponiveis, 
+                    obter_tickers_filtrados)
 
 # -----------------------------------------------------------------------------------
 
 def pagina_moneta(simbolos, paises, intervalos):
     st.title(body = "Modelo Moneta")
     st.write("O moneta é uma ferramenta quantitativa para diversificação de carteira")
+    st.info("📊 **Ações Brasileiras com Classificação BESST** (método Jeito Barsi de Investir)")
 
     # -----------------------------------------------------------------------------------
-    # Divisão do layout da barra lateral (sidebar) em duas colunas
-    colunas= st.sidebar.columns(2)
-
-    # Radio buttom para seleção do país
-    pais = colunas[0].radio(label = "Selecione uma bolsa de ações",
-                                options = paises, # Lista de países disponível na variável países do arquivo utils/gerais.py
-                                index = 0) # Índice 0 para selecionar o primeiro país da lista por padrão (Brasil) e índice 1 para selecionar o segundo país da lista (Estados Unidos)
+    # Configuração fixa para Brasil
+    pais = "Brasil"
+    moeda = "R$"
     
-    print(pais)
-    print(paises)
-    print(simbolos)
-    
-    # Seleção da moeda
-    moeda = f"{'R$' if pais == 'Brasil' else f'US$'}"
-
     # Seleção do intervalo de tempo
-    intervalo = colunas[1].radio(label = "Selecione o intervalo de dados",
-                                options = intervalos,
-                                index = 0)
+    intervalo = st.sidebar.radio(
+        label = "Selecione o intervalo de dados",
+        options = intervalos,
+        index = 0
+    )
     
     # Linha divisória no sidebar (quebra de layout)
     st.sidebar.divider()
 
     # -----------------------------------------------------------------------------------
+    # FILTRO 1: Classificação BESST
+    st.sidebar.subheader("🎯 Filtros de Seleção")
     
-    # Seleção do país e das ações correspondentes
-    flag_acoes = st.sidebar.checkbox(label = f"Selecionar todas as ações do país {pais}")
-    if flag_acoes == True:
-        bolsa_acoes = simbolos[paises[pais]][1:] # Seleciona todas as ações da lista por slice da segunda posição até o final (excluindo o primeiro elemento que é o índice do país na lista BOVA11.SA para o Brasil e ^GSPC para os Estados Unidos que não são ações e sim índices de referência para o mercado de ações do país)
-    else:
-        bolsa_acoes = simbolos[paises[pais]][1:10] # Seleciona as 10 primeiras ações por slice (fatiamento) da lista
-        
-    # Seleção das ações
-    acoes_selecionadas = st.sidebar.multiselect(
-        label = "Selecione as ações para rodar o modelo",
-        options = bolsa_acoes,
-        default = bolsa_acoes
+    classificacoes_disponiveis = obter_classificacoes_besst()
+    classificacoes_selecionadas = st.sidebar.multiselect(
+        label = "1️⃣ Classificação BESST",
+        options = classificacoes_disponiveis,
+        default = classificacoes_disponiveis,
+        help = "Filtro por classificação da metodologia Jeito Barsi de Investir (JBI)"
+    )
+    
+    # -----------------------------------------------------------------------------------
+    # FILTRO 2: Segmento B3
+    if classificacoes_selecionadas:
+        segmentos_disponiveis = obter_segmentos_b3_disponiveis(classificacao_besst=None)
+        segmentos_selecionados = st.sidebar.multiselect(
+            label = "2️⃣ Segmento B3",
+            options = segmentos_disponiveis,
+            default = segmentos_disponiveis,
+            help = "Filtro por segmento de listagem da B3"
         )
+        
+        # Mostra quantidade de segmentos selecionados
+        if segmentos_selecionados:
+            st.sidebar.caption(f"💼 {len(segmentos_selecionados)} segmento(s) selecionado(s)")
+    else:
+        segmentos_selecionados = []
+        st.sidebar.warning("⚠️ Selecione ao menos uma Classificação BESST")
+    
+    # Linha divisória no sidebar
+    st.sidebar.divider()
+    
+    # -----------------------------------------------------------------------------------
+    # FILTRO 3: Seleção de Tickers
+    if classificacoes_selecionadas and segmentos_selecionados:
+        # Obtém os tickers filtrados
+        tickers_dict = obter_tickers_filtrados(
+            classificacoes_besst=classificacoes_selecionadas,
+            segmentos_b3=segmentos_selecionados
+        )
+        
+        # Mostra estatísticas dos tickers disponíveis
+        st.sidebar.caption(f"📊 {len(tickers_dict)} ticker(s) disponível(is) após filtros")
+        
+        # Cria lista formatada para exibição: "TICKER - Nome da Empresa"
+        tickers_formatados = {}
+        for ticker, info in tickers_dict.items():
+            label = f"{ticker} - {info['Empresa']}"
+            tickers_formatados[label] = ticker
+        
+        # Checkbox para selecionar todos os tickers
+        flag_todos_tickers = st.sidebar.checkbox(
+            label = f"Selecionar todos os {len(tickers_formatados)} tickers filtrados",
+            value = False
+        )
+        
+        # Define tickers padrão
+        if flag_todos_tickers:
+            tickers_default = list(tickers_formatados.keys())
+        else:
+            # Seleciona os 10 primeiros como padrão
+            tickers_default = list(tickers_formatados.keys())[:min(10, len(tickers_formatados))]
+        
+        # Seleção dos tickers
+        tickers_selecionados_formatados = st.sidebar.multiselect(
+            label = "3️⃣ Selecione os Tickers",
+            options = list(tickers_formatados.keys()),
+            default = tickers_default,
+            help = "Selecione os tickers que deseja incluir no modelo"
+        )
+        
+        # Converte de volta para lista de tickers (sem o nome da empresa)
+        acoes_selecionadas = [tickers_formatados[item] for item in tickers_selecionados_formatados]
+        
+        # Mostra contador de tickers selecionados
+        st.sidebar.success(f"✅ {len(acoes_selecionadas)} ticker(s) selecionado(s)")
+        
+        # Expander com detalhes dos tickers selecionados
+        if acoes_selecionadas:
+            with st.sidebar.expander("📋 Ver Detalhes dos Tickers Selecionados"):
+                for ticker in acoes_selecionadas:
+                    info = tickers_dict[ticker]
+                    st.text(f"• {ticker}")
+                    st.caption(f"  {info['Empresa']}")
+                    st.caption(f"  BESST: {info['Classificacao_BESST']}")
+                    st.caption(f"  Segmento: {info['Segmento_B3']}")
+                    st.caption(f"  Setor: {info['Setor']}")
+                    st.divider()
+        
+    else:
+        acoes_selecionadas = []
+        if not segmentos_selecionados and classificacoes_selecionadas:
+            st.sidebar.warning("⚠️ Selecione ao menos um Segmento B3")
     
     # Linha divisória no sidebar (quebra de layout)
     st.sidebar.divider()
@@ -60,11 +133,11 @@ def pagina_moneta(simbolos, paises, intervalos):
     
     # Configuração do modelo
     valor_investimento = st.sidebar.number_input(
-        label = f"Insira o valor do investimento",
+        label = f"💰 Valor do Investimento ({moeda})",
         min_value = 1000,
-        value = 1000,
-        step = 50
-        ),
+        value = 10000,
+        step = 1000
+        )
 
     # Linha divisória no sidebar (quebra de layout)
     st.sidebar.divider()
@@ -128,7 +201,73 @@ def pagina_moneta(simbolos, paises, intervalos):
     # -----------------------------------------------------------------------------------
 
     # Botão para rodar o modelo
-    botao_rodar_modelo = st.sidebar.button(label = "Rodar o modelo")
+    botao_rodar_modelo = st.sidebar.button(label = "▶️ Rodar o Modelo", type="primary", use_container_width=True)
+
+    # -----------------------------------------------------------------------------------
+    # ÁREA PRINCIPAL - Estatísticas e Informações
+    
+    # Mostra estatísticas dos filtros aplicados na área principal
+    if classificacoes_selecionadas and segmentos_selecionados and acoes_selecionadas:
+        st.divider()
+        st.subheader("📈 Resumo da Seleção")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric(
+                label="Classificações BESST",
+                value=len(classificacoes_selecionadas),
+                help="Quantidade de classificações BESST selecionadas"
+            )
+        
+        with col2:
+            st.metric(
+                label="Segmentos B3",
+                value=len(segmentos_selecionados),
+                help="Quantidade de segmentos B3 selecionados"
+            )
+        
+        with col3:
+            st.metric(
+                label="Tickers Disponíveis",
+                value=len(tickers_dict),
+                help="Total de tickers após aplicar filtros"
+            )
+        
+        with col4:
+            st.metric(
+                label="Tickers Selecionados",
+                value=len(acoes_selecionadas),
+                help="Quantidade de tickers que serão usados no modelo"
+            )
+        
+        # Mostra tabela com distribuição por classificação BESST
+        with st.expander("📊 Ver Distribuição dos Tickers Selecionados"):
+            # Conta tickers por classificação
+            distribuicao_besst = {}
+            for ticker in acoes_selecionadas:
+                classificacao = tickers_dict[ticker]['Classificacao_BESST']
+                distribuicao_besst[classificacao] = distribuicao_besst.get(classificacao, 0) + 1
+            
+            col_a, col_b = st.columns(2)
+            
+            with col_a:
+                st.markdown("**Por Classificação BESST:**")
+                for classif, qtd in sorted(distribuicao_besst.items()):
+                    st.text(f"• {classif}: {qtd} ticker(s)")
+            
+            with col_b:
+                # Conta tickers por segmento
+                distribuicao_segmento = {}
+                for ticker in acoes_selecionadas:
+                    segmento = tickers_dict[ticker]['Segmento_B3']
+                    distribuicao_segmento[segmento] = distribuicao_segmento.get(segmento, 0) + 1
+                
+                st.markdown("**Por Segmento B3:**")
+                for seg, qtd in sorted(distribuicao_segmento.items(), key=lambda x: x[1], reverse=True)[:5]:
+                    st.text(f"• {seg}: {qtd} ticker(s)")
+
+    # -----------------------------------------------------------------------------------
 
     # Condição para rodar o modelo
     if botao_rodar_modelo == True:
@@ -155,7 +294,7 @@ def pagina_moneta(simbolos, paises, intervalos):
                                         intervalo = intervalos[intervalo],
                                         maiores_medias = qtd_maiores_medias)
         
-        #print(df_variacoes)
+        print(df_variacoes)
 
         if df_variacoes.empty or df_variacoes.shape[1] == 0:
             st.error("Após o tratamento, não restaram séries válidas para o modelo. Diminua o filtro de médias ou escolha mais tickers.")
@@ -172,7 +311,7 @@ def pagina_moneta(simbolos, paises, intervalos):
         # Gera o DataFrame da carteira final
         df_carteira = gera_df_carteira(carteira_final = carteira_otima,
                                     cotacoes = df_cotacoes,
-                                    pais = paises[pais],
+                                    pais = "BR",
                                     percentual_filtrar = percentual_filtrar,
                                     valor_investir = valor_investimento)
         

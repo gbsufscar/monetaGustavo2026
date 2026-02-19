@@ -1,49 +1,121 @@
-# Coleção de símbolos de ações para os mercados dos Estados Unidos e do Brasil
+"""
+Módulo de símbolos de ações brasileiras
+Utiliza classificação BESST (metodologia Jeito Barsi de Investir)
+e informações de Segmento B3
+"""
 
-simbolos = \
-{"US": ['^GSPC', 
-            'AAPL', 'MSFT', 'AMZN', 'GOOG', 'GOOGL', 
-            'META', 'TSLA', 'BRK-B', 'V', 'JNJ', 
-            'JPM', 'WMT', 'NVDA', 'UNH', 'MA', 
-            'PG', 'HD', 'DIS', 'BAC', 'PYPL', 
-            'CMCSA', 'VZ', 'ADBE', 'NFLX', 'KO', 
-            'XOM', 'PEP', 'T', 'PFE', 'INTC', 
-            'MRK', 'CSCO', 'ABT', 'CRM', 'CVX', 
-            'ABBV', 'TMO', 'ACN', 'NKE', 'AVGO', 
-            'MCD', 'COST', 'QCOM', 'NEE', 'TXN', 
-            'DHR', 'MDT', 'HON', 'UNP', 'LIN', 
-            'AMGN', 'PM', 'SBUX', 'LLY', 'UPS', 
-            'LOW', 'AMT', 'IBM', 'CAT', 'GILD', 
-            'MMM', 'MO', 'GE', 'CHTR', 'NOW', 
-            'BLK', 'INTU', 'SPGI', 'ISRG', 'AMD', 
-            'CVS', 'ZTS', 'PLD', 'AXP', 'TGT', 
-            'FIS', 'APD',  'MDLZ', 'ADP', 'LMT', 
-            'CME', 'DUK', 'CL', 'ICE', 'BDX', 
-            'CB', 'SPG', 'CI', 'NSC', 'VRTX', 
-            'CCI', 'RTX', 'TMUS', 'BKNG', 'DE', 
-            'TJX', 'SYK', 'TFC'],
+import json
+import os
 
-"BR": ['BOVA11.SA', 
-            'ABEV3.SA', 'AGRO3.SA', 'ALPA3.SA', 'ALUP11.SA', 
-            'ANIM3.SA', 'ARZZ3.SA', 'B3SA3.SA', 'BAZA3.SA', 'BBAS3.SA', 
-            'BBDC3.SA', 'BBSE3.SA', 'BEEF3.SA', 'BEES3.SA', 'BHIA3.SA', 
-            'BMEB3.SA', 'BNBR3.SA', 'BRAP3.SA', 'BRFS3.SA', 'BRKM3.SA', 
-            'BRSR3.SA', 'CCRO3.SA', 'CEEB3.SA', 'CGAS3.SA', 'CIEL3.SA', 
-            'CLSC3.SA', 'CMIG3.SA', 'COCE3.SA', 'COGN3.SA', 'CPFE3.SA', 
-            'CPLE3.SA', 'CSAN3.SA', 'CSMG3.SA', 'CSNA3.SA', 'CVCB3.SA', 
-            'CYRE3.SA', 'DASA3.SA', 'DIRR3.SA', 'DXCO3.SA', 'ECOR3.SA', 
-            'EGIE3.SA', 'ELET3.SA', 'EMBR3.SA', 'ENAT3.SA', 'ENEV3.SA', 
-            'ENGI11.SA', 'ENGI3.SA', 'EQPA3.SA', 'EQTL3.SA', 'EVEN3.SA', 
-            'EZTC3.SA', 'FLRY3.SA', 'FRAS3.SA', 'GGBR3.SA', 'GOAU3.SA', 
-            'GRND3.SA', 'GUAR3.SA', 'HYPE3.SA', 'ITSA3.SA', 'ITUB3.SA', 
-            'JBSS3.SA', 'JHSF3.SA', 'KEPL3.SA', 'KLBN11.SA', 'KLBN3.SA', 
-            'LEVE3.SA', 'LIGT3.SA', 'LOGN3.SA', 'LREN3.SA', 'MDIA3.SA', 
-            'MGLU3.SA', 'MILS3.SA', 'MOAR3.SA', 'MRFG3.SA', 'MRVE3.SA', 
-            'MULT3.SA', 'MYPK3.SA', 'ODPV3.SA', 'OFSA3.SA', 'PETR3.SA', 
-            'PNVL3.SA', 'POMO3.SA', 'POSI3.SA', 'PRIO3.SA', 'PSSA3.SA', 
-            'RADL3.SA', 'RAIL3.SA', 'RANI3.SA', 'RAPT3.SA', 'RENT3.SA', 
-            'ROMI3.SA', 'SANB11.SA', 'SANB3.SA', 'SBSP3.SA', 'SCAR3.SA', 
-            'SLCE3.SA', 'SMTO3.SA', 'TAEE11.SA', 'TASA3.SA', 'TEND3.SA', 
-            'TGMA3.SA', 'TIMS3.SA', 'TOTS3.SA', 'TRPL3.SA', 'TUPY3.SA', 
-            'UGPA3.SA', 'UNIP3.SA', 'USIM3.SA', 'VALE3.SA', 'VIVT3.SA', 
-            'VLID3.SA', 'VULC3.SA', 'WEGE3.SA', 'WHRL3.SA', 'YDUQ3.SA']}
+# Caminho para o arquivo JSON com os dados dos tickers
+CAMINHO_JSON = os.path.join(os.path.dirname(__file__), 'utils', 'gera_tikers', 'ticker_besst_yf.json')
+
+# Carrega os dados do arquivo JSON
+def carregar_dados_tickers():
+    """
+    Carrega os dados dos tickers do arquivo JSON
+    """
+    try:
+        with open(CAMINHO_JSON, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Erro: Arquivo {CAMINHO_JSON} não encontrado")
+        return {}
+    except json.JSONDecodeError:
+        print(f"Erro: Falha ao decodificar o arquivo JSON")
+        return {}
+
+# Dados dos tickers brasileiros
+dados_tickers_br = carregar_dados_tickers()
+
+def obter_classificacoes_besst():
+    """
+    Retorna a lista de classificações BESST disponíveis
+    """
+    # Retorna as chaves do dicionário, que correspondem às classificações BESST
+    return list(dados_tickers_br.keys())
+
+def obter_setores_por_classificacao(classificacao_besst):
+    """
+    Retorna os setores disponíveis para uma classificação BESST
+    """
+    # Verifica se a classificação existe nos dados e retorna os setores
+    if classificacao_besst in dados_tickers_br:
+        return list(dados_tickers_br[classificacao_besst].keys())
+    return []
+
+def obter_segmentos_b3_disponiveis(classificacao_besst=None):
+    """
+    Retorna lista única de segmentos B3 disponíveis
+    Se classificacao_besst for fornecida, retorna apenas os segmentos dessa classificação
+    """
+    # Utiliza um set para garantir unicidade dos segmentos
+    segmentos = set()
+    # Percorre os dados dos tickers para coletar os segmentos B3
+    if classificacao_besst and classificacao_besst in dados_tickers_br:
+        # Percorre apenas a classificação especificada
+        for setor in dados_tickers_br[classificacao_besst].values():
+            for ticker_info in setor.values():
+                if 'Segmento_B3' in ticker_info:
+                    segmentos.add(ticker_info['Segmento_B3'])
+    else:
+        # Percorre todas as classificações
+        for classificacao in dados_tickers_br.values():
+            for setor in classificacao.values():
+                for ticker_info in setor.values():
+                    if 'Segmento_B3' in ticker_info:
+                        segmentos.add(ticker_info['Segmento_B3'])
+    # Retorna a lista de segmentos B3 ordenada
+    return sorted(list(segmentos))
+
+def obter_tickers_filtrados(classificacoes_besst=None, segmentos_b3=None):
+    """
+    Retorna dicionário de tickers filtrados por classificação BESST e/ou Segmento B3
+    
+    Args:
+        classificacoes_besst: Lista de classificações BESST ou None para todas
+        segmentos_b3: Lista de segmentos B3 ou None para todos
+    
+    Returns:
+        Dict com estrutura: {ticker: {'Empresa': str, 'Segmento_B3': str, 'Classificacao_BESST': str, 'Setor': str}}
+    """
+    tickers_filtrados = {} # Dicionário para armazenar os tickers filtrados
+    
+    # Se classificacoes_besst não for fornecido, usa todas
+    if classificacoes_besst is None:
+        classificacoes_besst = obter_classificacoes_besst()
+    
+    # Garante que é uma lista
+    if isinstance(classificacoes_besst, str):
+        classificacoes_besst = [classificacoes_besst] # Se for uma string, converte para lista
+    
+    # Percorre as classificações selecionadas
+    for classificacao in classificacoes_besst:
+        if classificacao not in dados_tickers_br:
+            continue
+            
+        for setor, tickers in dados_tickers_br[classificacao].items():
+            for ticker, info in tickers.items():
+                # Aplica filtro de segmento B3 se fornecido
+                if segmentos_b3 is not None:
+                    # Garante que é uma lista
+                    if isinstance(segmentos_b3, str):
+                        segmentos_b3 = [segmentos_b3] # Se for uma string, converte para lista
+                    
+                    if info.get('Segmento_B3') not in segmentos_b3:
+                        continue
+                
+                # Adiciona o ticker com informações completas
+                tickers_filtrados[ticker] = {
+                    'Empresa': info.get('Empresa', 'N/A'),
+                    'Segmento_B3': info.get('Segmento_B3', 'N/A'),
+                    'Classificacao_BESST': classificacao,
+                    'Setor': setor
+                }
+    # Retorna o dicionário de tickers filtrados
+    return tickers_filtrados
+
+# Mantém compatibilidade com código legacy (se necessário)
+simbolos = {
+    "BR": list(obter_tickers_filtrados().keys())
+}

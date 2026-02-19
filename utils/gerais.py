@@ -4,10 +4,14 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta, date
+from simbolos import obter_tickers_filtrados
 
 # -----------------------------------------------------------------------------------
 
 def arredonda_para_baixo(numero, casas_decimais=0):
+    # Trata valores NaN retornando 0
+    if pd.isna(numero):
+        return 0
     multiplicador = 10 ** casas_decimais
     return int(numero * multiplicador) / multiplicador
 
@@ -48,6 +52,9 @@ def gera_df_carteira(carteira_final: pd.Series, cotacoes: pd.DataFrame, pais: st
     # ultimos valores das ações que passaram pelo filtro
     ultimos_precos = cotacoes.loc[:, simbolos_filtrados].iloc[-1]
 
+    # obtém informações dos tickers (incluindo nome da empresa)
+    todos_tickers_info = obter_tickers_filtrados()
+    
     # quantidade de ações a serem compradas para cada ação da carteira já filtrada
     qtd_acoes = carteira_final_filtrada * valor_investir / ultimos_precos
 
@@ -61,6 +68,10 @@ def gera_df_carteira(carteira_final: pd.Series, cotacoes: pd.DataFrame, pais: st
     # cria o DataFrame com as informações da carteira final
     df_carteira = (carteira_final_filtrada * 100).round(2).to_frame(name="Investido (%)")
 
+    # insere a coluna 'Empresa' como primeira coluna
+    empresas = [todos_tickers_info.get(ticker, {}).get('Empresa', 'N/A') for ticker in simbolos_filtrados]
+    df_carteira.insert(0, 'Empresa', empresas)
+
     # cria a coluna 'Qtd de Acoes' para cada ação no DataFrame da carteira
     df_carteira.loc[:, 'Qtd de Acoes'] = qtd_acoes_ajustado.values
 
@@ -68,7 +79,7 @@ def gera_df_carteira(carteira_final: pd.Series, cotacoes: pd.DataFrame, pais: st
     df_carteira.loc[:, f"Investido ({'R$' if pais == 'BR' else 'US$'})"] = (ultimos_precos * df_carteira.loc[:, 'Qtd de Acoes']).round(2)
 
     # insere a coluna 'Precos (R$ ou US$)' pada cada ação no DataFrame da carteira
-    df_carteira.insert(0, f"Precos ({'R$' if pais == 'BR' else 'US$'})", ultimos_precos.round(2))
+    df_carteira.insert(1, f"Precos ({'R$' if pais == 'BR' else 'US$'})", ultimos_precos.round(2))
 
     return df_carteira
 
