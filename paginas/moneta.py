@@ -22,10 +22,10 @@ def selecionar_acoes() -> tuple:
     
     Returns:
         tuple: (acoes_selecionadas, tickers_dict, classificacoes_selecionadas, segmentos_selecionados)
-               - acoes_selecionadas (list): Símbolos dos tickers selecionados (ex: ['PETR4.SA', 'VALE3.SA'])
-               - tickers_dict (dict): Dicionário com informações dos tickers (empresa, BESST, segmento, etc)
-               - classificacoes_selecionadas (list): Classificações BESST filtradas
-               - segmentos_selecionados (list): Segmentos B3 filtrados
+            - acoes_selecionadas (list): Símbolos dos tickers selecionados (ex: ['PETR4.SA', 'VALE3.SA'])
+            - tickers_dict (dict): Dicionário com informações dos tickers (empresa, BESST, segmento, etc)
+            - classificacoes_selecionadas (list): Classificações BESST filtradas
+            - segmentos_selecionados (list): Segmentos B3 filtrados
     """
     
     st.sidebar.subheader("🎯 Filtros de Seleção")
